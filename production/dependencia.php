@@ -482,20 +482,6 @@ body {
                                     118 Programas Sociales Y Especiales
                                     </textarea>
                                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                 </p>
                             </div>
                             <br>
@@ -503,10 +489,9 @@ body {
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="submit" class="btn btn-primary" data-toggle="modal"
-                            data-target=".bs-example-modal-ingresar-elector" value="Lista de Dependencias">
-                        <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                            value="Agregar Dependencia">
+                        <input type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-ingresar-elector" value="Lista de Dependencias">
+                        <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Agregar Dependencia">
+                        <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Editar">
                         <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                     </div>
                 </div>
@@ -1066,8 +1051,7 @@ body {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                                value="Asignar radicado">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Asignar radicado">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                         </div>
                     </div>
