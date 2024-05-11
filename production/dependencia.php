@@ -460,7 +460,27 @@ body {
                                 </div>
                                 <div class="col-md-12 col-sm-10 m">
                                     <label for="munici">Asunto *</label>
-                                    <textarea rows="3" class="form-control" placeholder="Textarea">xxxxxxx</textarea>
+                                    <textarea rows="3" class="form-control" placeholder="Textarea">
+                                    100 Canal De Recepción
+                                    101 Despacho Alcalde
+                                    102 Oficina Jurídica
+                                    103 Secretaria Desarrollo Económico Y Competitividad
+                                    104 Secretaria De Hacienda Y Finanzas Públicas
+                                    105 Secretaria De Gobierno Y Desarrollo SocialSecretaria De Planeación
+                                    106 Oficina De Ordenamiento Territorial Y Control Urbano
+                                    107 Oficina De Seguridad Y Convivencia 
+                                    108 Ciudadana
+                                    109 Secretaria De Salud Y Seguridad Social
+                                    110 Secretaria De Educación
+                                    111 Secretaria De Turismo Y Cultura
+                                    112 Sisben
+                                    113 Oficina De Transito Y Movilidad
+                                    114 Secretaria General
+                                    115 Gestión Documental
+                                    116 Comisaria De Familia
+                                    117 Oficina De Talento Humano
+                                    118 Programas Sociales Y Especiales
+                                    </textarea>
                                 </div>
 
 
