@@ -113,10 +113,6 @@ body {
                         <div class="container">
                             <div class="row">
                                 <p>
-
-
-
-
                                 <div class="col-md-12  col-2 m">
                                     <label for="heard">Seleccionar Dependencia *</label>
                                     <select name="genero" class="form-control" required>
@@ -124,24 +120,32 @@ body {
                                         <option value="Canal De Recepción">Canal De Recepción</option>
                                         <option value="Despacho Alcalde">Despacho Alcalde</option>
                                         <option value="Oficina Jurídica">Oficina Jurídica</option>
-                                        <option value="Secretaria Desarrollo Económico Y Competitividad">SecretariaDesarrollo Económico Y Competitividad</option>
-                                        <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda Y Finanzas Públicas</option>
+                                        <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                            SecretariaDesarrollo Económico Y Competitividad</option>
+                                        <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda
+                                            Y Finanzas Públicas</option>
                                         <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
                                         <option value="Desarrollo Social">Desarrollo Social</option>
                                         <option value="Secretaria De Planeación">Secretaria De Planeación</option>
                                         <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
-                                        <option value="Territorial Y Control Urbano">Territorial Y Control Urbano</option>
-                                        <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad Y Convivencia Ciudadana</option>
-                                        <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud YSeguridad Social</option>
+                                        <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
+                                        </option>
+                                        <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad
+                                            Y Convivencia Ciudadana</option>
+                                        <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                            YSeguridad Social</option>
                                         <option value="Secretaria De Educación">Secretaria De Educación</option>
-                                        <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura</option>
+                                        <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                        </option>
                                         <option value="Sisben"> Sisben </option>
-                                        <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad</option>
+                                        <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                        </option>
                                         <option value="Secretaria General">Secretaria General</option>
                                         <option value="Gestión Documental">Gestión Documental</option>
                                         <option value="Comisaria De Familia">Comisaria De Familia</option>
                                         <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
-                                        <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales</option>
+                                        <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="col-md-4 col-2 m">
@@ -430,24 +434,32 @@ body {
                                         <option value="Canal De Recepción">Canal De Recepción</option>
                                         <option value="Despacho Alcalde">Despacho Alcalde</option>
                                         <option value="Oficina Jurídica">Oficina Jurídica</option>
-                                        <option value="Secretaria Desarrollo Económico Y Competitividad">SecretariaDesarrollo Económico Y Competitividad</option>
-                                        <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda Y Finanzas Públicas</option>
+                                        <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                            SecretariaDesarrollo Económico Y Competitividad</option>
+                                        <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda
+                                            Y Finanzas Públicas</option>
                                         <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
                                         <option value="Desarrollo Social">Desarrollo Social</option>
                                         <option value="Secretaria De Planeación">Secretaria De Planeación</option>
                                         <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
-                                        <option value="Territorial Y Control Urbano">Territorial Y Control Urbano</option>
-                                        <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad Y Convivencia Ciudadana</option>
-                                        <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud YSeguridad Social</option>
+                                        <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
+                                        </option>
+                                        <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad
+                                            Y Convivencia Ciudadana</option>
+                                        <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                            YSeguridad Social</option>
                                         <option value="Secretaria De Educación">Secretaria De Educación</option>
-                                        <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura</option>
+                                        <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                        </option>
                                         <option value="Sisben"> Sisben </option>
-                                        <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad</option>
+                                        <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                        </option>
                                         <option value="Secretaria General">Secretaria General</option>
                                         <option value="Gestión Documental">Gestión Documental</option>
                                         <option value="Comisaria De Familia">Comisaria De Familia</option>
                                         <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
-                                        <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales</option>
+                                        <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="col-md-6  col-2 m">
@@ -489,15 +501,16 @@ body {
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-ingresar-elector" value="Lista de Dependencias">
-                        <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Agregar Dependencia">
+                        <input type="submit" class="btn btn-primary" data-toggle="modal"
+                            data-target=".bs-example-modal-ingresar-elector" value="Lista de Dependencias">
+                        <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
+                            value="Agregar Dependencia">
                         <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Editar">
                         <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="modal fade bs-example-modal-ingresar-elector" tabindex=" -1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
@@ -565,17 +578,141 @@ body {
                 </div>
             </div>
         </div>
-
-
-
-
-
     </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2222222222
-        Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-        Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-        farm-to-table craft beer twee. Qui photo
-        booth letterpress, commodo enim craft beer mlkshk aliquip
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="x_panel">
+                <p>
+                <p><b class="moda" style="font-size: 24px;">Administrar Dependencias</b></p>
+                <!-- boton primer modal -->
+                <div style="margin-left: 75%;">
+                    <!--<button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal"
+                                data-target=".bs-example-modal-ingresar-remitente">
+                                Ingresar Remitente</button>-->
+                </div>
+                <div class="x_panel">
+                    <div class="container">
+                        <div class="row">
+                            <p>
+                            <div class="col-md-12  col-2 m">
+                                <label for="heard">Seleccionar Dependencia *</label>
+                                <select name="genero" class="form-control" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Canal De Recepción">Canal De Recepción</option>
+                                    <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                    <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                    <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                        SecretariaDesarrollo Económico Y Competitividad</option>
+                                    <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda Y
+                                        Finanzas Públicas</option>
+                                    <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
+                                    <option value="Desarrollo Social">Desarrollo Social</option>
+                                    <option value="Secretaria De Planeación">Secretaria De Planeación</option>
+                                    <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                    <option value="Territorial Y Control Urbano">Territorial Y Control Urbano</option>
+                                    <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad Y
+                                        Convivencia Ciudadana</option>
+                                    <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                        YSeguridad Social</option>
+                                    <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                    <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                    </option>
+                                    <option value="Sisben"> Sisben </option>
+                                    <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                    </option>
+                                    <option value="Secretaria General">Secretaria General</option>
+                                    <option value="Gestión Documental">Gestión Documental</option>
+                                    <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                    <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
+                                    <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-12  col-2 m">
+                                <label for="heard">Seleccionar Dependencia *</label>
+                                <select name="genero" class="form-control" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Canal De Recepción">Canal De Recepción</option>
+                                    <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                    <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                    <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                        SecretariaDesarrollo Económico Y Competitividad</option>
+                                    <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda Y
+                                        Finanzas Públicas</option>
+                                    <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
+                                    <option value="Desarrollo Social">Desarrollo Social</option>
+                                    <option value="Secretaria De Planeación">Secretaria De Planeación</option>
+                                    <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                    <option value="Territorial Y Control Urbano">Territorial Y Control Urbano</option>
+                                    <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad Y
+                                        Convivencia Ciudadana</option>
+                                    <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                        YSeguridad Social</option>
+                                    <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                    <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                    </option>
+                                    <option value="Sisben"> Sisben </option>
+                                    <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                    </option>
+                                    <option value="Secretaria General">Secretaria General</option>
+                                    <option value="Gestión Documental">Gestión Documental</option>
+                                    <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                    <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
+                                    <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-12  col-2 m">
+                                <label for="heard">Seleccionar Dependencia *</label>
+                                <select name="genero" class="form-control" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Canal De Recepción">Canal De Recepción</option>
+                                    <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                    <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                    <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                        SecretariaDesarrollo Económico Y Competitividad</option>
+                                    <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda Y
+                                        Finanzas Públicas</option>
+                                    <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
+                                    <option value="Desarrollo Social">Desarrollo Social</option>
+                                    <option value="Secretaria De Planeación">Secretaria De Planeación</option>
+                                    <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                    <option value="Territorial Y Control Urbano">Territorial Y Control Urbano</option>
+                                    <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad Y
+                                        Convivencia Ciudadana</option>
+                                    <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                        YSeguridad Social</option>
+                                    <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                    <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                    </option>
+                                    <option value="Sisben"> Sisben </option>
+                                    <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                    </option>
+                                    <option value="Secretaria General">Secretaria General</option>
+                                    <option value="Gestión Documental">Gestión Documental</option>
+                                    <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                    <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
+                                    <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                    </option>
+                                </select>
+                            </div>
+
+                            </p>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" data-toggle="modal"
+                        data-target=".bs-example-modal-ingresar-elector" value="Lista de Dependencias">
+                    <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
+                        value="Agregar Dependencia">
+                    <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Editar">
+                    <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+                </div>
+            </div>
+        </div>
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">33333333333
         xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
@@ -585,15 +722,7 @@ body {
     </div>
 </div>
 </div>
-
 </div>
-
-
-
-
-
-
-
 </div>
 <!--  modal ingresar radicacion -->
 <form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST"
@@ -1051,7 +1180,8 @@ body {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Asignar radicado">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
+                                value="Asignar radicado">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                         </div>
                     </div>
