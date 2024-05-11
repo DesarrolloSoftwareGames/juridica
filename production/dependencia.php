@@ -102,7 +102,7 @@ body {
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="x_panel">
                     <p>
-                    <p><b class="moda" style="font-size: 24px;">Administrar Dependencias XXXX</b></p>
+                    <p><b class="moda" style="font-size: 24px;">Administrar Dependencias</b></p>
                     <!-- boton primer modal -->
                     <div style="margin-left: 75%;">
                         <!--<button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal"
