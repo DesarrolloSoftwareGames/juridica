@@ -466,8 +466,35 @@ body {
                                     <label for="heard">Dependencia Jurisdiccional *</label>
                                     <select name="genero" class="form-control" required>
                                         <option value="">Seleccione</option>
-                                        <option value="100  INVIMA SAS INVM Activo">100 INVIMA SAS INVM Activo</option>
-                                        <option value="101 Solicitudes SOl Activo">101 Solicitudes SOl Activo</option>
+                                        <option value="Canal De Recepción">Canal De Recepción</option>
+                                        <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                        <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                        <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                            SecretariaDesarrollo Económico Y Competitividad</option>
+                                        <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda
+                                            Y Finanzas Públicas</option>
+                                        <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
+                                        <option value="Desarrollo Social">Desarrollo Social</option>
+                                        <option value="Secretaria De Planeación">Secretaria De Planeación</option>
+                                        <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                        <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
+                                        </option>
+                                        <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad
+                                            Y Convivencia Ciudadana</option>
+                                        <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                            YSeguridad Social</option>
+                                        <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                        <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                        </option>
+                                        <option value="Sisben"> Sisben </option>
+                                        <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                        </option>
+                                        <option value="Secretaria General">Secretaria General</option>
+                                        <option value="Gestión Documental">Gestión Documental</option>
+                                        <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                        <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
+                                        <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="col-md-12 col-sm-10 m">
@@ -478,7 +505,7 @@ body {
                                     102 Oficina Jurídica
                                     103 Secretaria Desarrollo Económico Y Competitividad
                                     104 Secretaria De Hacienda Y Finanzas Públicas
-                                    105 Secretaria De Gobierno Y Desarrollo SocialSecretaria De Planeación
+                                    105 Secretaria De Gobierno Y Desarrollo SocialSecretaria De Planeación  
                                     106 Oficina De Ordenamiento Territorial Y Control Urbano
                                     107 Oficina De Seguridad Y Convivencia 
                                     108 Ciudadana
