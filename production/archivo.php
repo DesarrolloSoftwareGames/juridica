@@ -76,11 +76,36 @@ table>tbody>tr>td {
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
 <div class="container" style="margin: 100px 0px 100px 420px ">
 
-    <div class="row">
-        
+<!-- Inicio modulo de Archivo-->
 
-
-    </div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        <th><h1>Menu de Archivo</h1></th>
+        </tr>         
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#">Busqueda Basica(Archivar)</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">Busqueda Avanzada</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Reporte por Radicados Archivados</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Transferencias documentales (Expedientes)</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Administracion de Edificios</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Listado tablas de retención documental</a></td>
+            </tr>
+    </tbody>
+</table>
+<!-- Fin de modulo de archivo -->
 </div>
 
 </div>

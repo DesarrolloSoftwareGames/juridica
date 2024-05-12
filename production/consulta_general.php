@@ -298,9 +298,9 @@ else {
             </form>
         </div>
 
-        <div id="resultadosBusqueda" class="mt-3">
+        <div class="table-responsive">
             <h2>Resultados de la búsqueda</h2>
-            <table class="table table-striped table-bordered">
+            <table id="resultadosBusqueda" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th>Número Radicado</th>
@@ -318,6 +318,17 @@ else {
                 <tbody>
                 </tbody>
             </table>
+            <div class="d-flex justify-content-end mt-3">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+            </nav>
+        </div>
         </div>
     </div>
 

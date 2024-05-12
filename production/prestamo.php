@@ -76,11 +76,33 @@ table>tbody>tr>td {
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
 <div class="container" style="margin: 100px 0px 100px 420px ">
 
-    <div class="row">
-        
+<!-- Inicio modulo de Prestamo-->
 
-
-    </div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        <th><h1>Prestamo y Control de Documentos</h1></th>
+        </tr>         
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#">Prestame de documentos</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">Devolución de documentos</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Generación de reportes</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">TCancelar solicitudes</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Administracion de Edificios</a></td>
+            </tr>
+    </tbody>
+</table>
+<!-- Fin de modulo de Prestamo-->
 </div>
 
 </div>
