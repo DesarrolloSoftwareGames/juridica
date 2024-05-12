@@ -9,12 +9,12 @@ $codigousuario = $aux[0];
 
 ///si estoy dentro////
 if ($galleta != NULL  && $_SESSION['id']) {
-    $usuario=$_SESSION['LOGIN'];
-    $tipousuario=$_SESSION['TIPOUSUARIO'];
-    $query = mysqli_query($conn, "select * from registro where NomUsuario='$usuario' "); 
+    $usuario = $_SESSION['LOGIN'];
+    $tipousuario = $_SESSION['TIPOUSUARIO'];
+    $query = mysqli_query($conn, "select * from registro where NomUsuario='$usuario' ");
     $row = mysqli_fetch_row($query);
-    $nombredeusuario=$row[2]." ".$row[4];
-    $foto=$row[12];
+    $nombredeusuario = $row[2] . " " . $row[4];
+    $foto = $row[12];
 } //si entro
 
 else {
@@ -28,36 +28,37 @@ else {
 <?php include('includes/navigation.php'); ?>
 
 <style>
-header {
-    background: #8E2DE2;
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
-}
+    header {
+        background: #8E2DE2;
+        background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+        background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    }
 
-/*estilos para la tabla  background-color: #337ab7 !important;*/
-table th {
+    /*estilos para la tabla  background-color: #337ab7 !important;*/
+    table th {
 
-    color: white;
-}
+        color: white;
+    }
 
-table>tbody>tr>td {
-    vertical-align: middle !important;
-}
+    table>tbody>tr>td {
+        vertical-align: middle !important;
+    }
 
-/*para alinear los botones y cuadro de busqueda*/
-.btn-group,
-.btn-group-vertical {
-    /*position: absolute !important;*/
-    margin-top: 100px;
-}
-.tam {
-    width: 100px;
-    height: 100px;
-}
+    /*para alinear los botones y cuadro de busqueda*/
+    .btn-group,
+    .btn-group-vertical {
+        /*position: absolute !important;*/
+        margin-top: 100px;
+    }
 
-.pos {
-    margin: 200px 10px 50px 10px;
-}
+    .tam {
+        width: 100px;
+        height: 100px;
+    }
+
+    .pos {
+        margin: 200px 10px 50px 10px;
+    }
 </style>
 <!-- xxxxxxxxxxxxxxxxx para los botones de la tabla exportar, pdf, imprimir xxxxxxxxxxxxxxxxxxxxxxx -->
 <!--datables CSS básico-->
@@ -66,27 +67,327 @@ table>tbody>tr>td {
 <link rel="stylesheet" type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 
 <!--font awesome con CDN-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 <!-- xxxxxxxxxxxxxxxxxx  para los botones de la tabla exportar, pdf, imprimir xxxxxxxxxxxxxxxxxxxxxxx -->
 
 <!--
 <button type="button" class="btn btn-primary boton" data-toggle="modal"
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
-<div class="container" style="margin: 100px 0px 100px 420px ">
+<div class="container">
 
     <div class="row">
-        
 
+        <div class="x_panel">
+            <p>
+            <p><b class="moda" style="font-size: 24px;">Destinatario</b></p>
+            <!-- boton primer modal -->
+            <div class="x_panel">
+                <div class="container">
+                    <div class="row">
+                        <p>
+                        <div class="col-md-4 col-2 m">
+                            <label for="prinombre">Ingresar Nombre *</label>
+                            <input type="text" name="nombre" class="form-control" aria-describedby="name" placeholder="(mínimo 3 caracteres)" required>
+                            <div style="margin-left: 75%;">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-remitente">
+                                    Agregar Remitente
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12  col-2 m">
+                            <label for="heard">Seleccionar Dependencia *</label>
+                            <select name="genero" class="form-control" required>
+                                <option value="">Seleccione</option>
+                                <option value="Canal De Recepción">Canal De Recepción</option>
+                                <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                    SecretariaDesarrollo Económico Y Competitividad</option>
+                                <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda
+                                    Y Finanzas Públicas</option>
+                                <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
+                                <option value="Desarrollo Social">Desarrollo Social</option>
+                                <option value="Secretaria De Planeación">Secretaria De Planeación</option>
+                                <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
+                                </option>
+                                <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad
+                                    Y Convivencia Ciudadana</option>
+                                <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                    YSeguridad Social</option>
+                                <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                </option>
+                                <option value="Sisben"> Sisben </option>
+                                <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                </option>
+                                <option value="Secretaria General">Secretaria General</option>
+                                <option value="Gestión Documental">Gestión Documental</option>
+                                <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
+                                <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-2 m">
+                            <label for="prinombre">Ingresar código *</label>
+                            <input type="text" name="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required>
+                        </div>
+                        <div class="col-md-4 col-10 m">
+                            <label for="prinombre">Ingresar sigla *</label>
+                            <input type="text" name="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required>
+                        </div>
+                        <div class="col-md-4  col-10 m">
+                            <label for="heard">Estado *</label>
+                            <select name="genero" class="form-control" required>
+                                <option value="">Seleccione</option>
+                                <option value="Inactiva">Inactiva</option>
+                                <option value="Activa">Activa</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-2 m">
+                            <label for="prinombre">Nombre *</label>
+                            <input type="text" name="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required>
+                        </div>
+                        <div class="col-md-6 col-10 m">
+                            <label for="prinombre">Dirección *</label>
+                            <input type="text" name="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required>
+                        </div>
+                        <div class="col-md-4  col-2 m">
+                            <label for="heard">Continente *</label>
+                            <select name="genero" class="form-control" required>
+                                <option value="América del Sur">América del Sur</option>
+                                <!--<option value="Asia">Asia</option>
+                                            <option value="Africa">Africa</option>
+                                            <option value="América del Norte">América del Norte</option>
+                                            <option value="América del Sur">América del Sur</option>
+                                            <option value="Antártida">Antártida</option>
+                                            <option value="Europa">Europa</option>
+                                            <option value="Oceanía">Oceanía</option>-->
+                            </select>
+                        </div>
+                        <div class="col-md-4  col-2 m">
+                            <label for="heard">País *</label>
+                            <select name="genero" class="form-control" required>
+                                <option value="Colombia">Colombia</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-sm-10 m">
+                            <label for="heard">Departamento *</label>
+                            <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()" required>
+                                <option value="La Guajira">La Guajira</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Antioquia">Antioquia</option>
+                                <option value="Arauca">Arauca</option>
+                                <option value="Atlántico">Atlántico</option>
+                                <option value="Bogotá D.C.">Bogotá D.C.</option>
+                                <option value="Bolívar">Bolívar</option>
+                                <option value="Boyacá">Boyacá</option>
+                                <option value="Caldas">Caldas</option>
+                                <option value="Caquetá">Caquetá</option>
+                                <option value="Casanare">Cauca</option>
+                                <option value="Cauca">Cauca</option>
+                                <option value="Cesar">Cesar</option>
+                                <option value="Chocó">Chocó</option>
+                                <option value="Córdoba">Córdoba</option>
+                                <option value="Cundinamarca">Cundinamarca</option>
+                                <option value="Guaviare">Guaviare</option>
+                                <option value="Huila">Huila</option>
+                                <option value="La Guajira">La Guajira</option>
+                                <option value="Magdalena">Magdalena</option>
+                                <option value="Meta">Meta</option>
+                                <option value="Nariño">Nariño</option>
+                                <option value="Norte De Santander">Norte De Santander</option>
+                                <option value="Putumayo">Putumayo</option>
+                                <option value="Quindío">Quindío</option>
+                                <option value="Risaralda">Risaralda</option>
+                                <option value="San Andrés">San Andrés</option>
+                                <option value="Santander">Santander</option>
+                                <option value="Sucre">Sucre</option>
+                                <option value="Tolima">Tolima</option>
+                                <option value="Valle Del Cauca">Valle Del Cauca</option>
+                                <option value="Vaupés">Vaupés</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6  col-2 m">
+                            <label for="heard">Dependencia Principal *</label>
+                            <select name="genero" class="form-control" required>
+                                <option value="">Seleccione</option>
+                                <option value="Canal De Recepción">Canal De Recepción</option>
+                                <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                    SecretariaDesarrollo Económico Y Competitividad</option>
+                                <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda
+                                    Y Finanzas Públicas</option>
+                                <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
+                                <option value="Desarrollo Social">Desarrollo Social</option>
+                                <option value="Secretaria De Planeación">Secretaria De Planeación</option>
+                                <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
+                                </option>
+                                <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad
+                                    Y Convivencia Ciudadana</option>
+                                <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                    YSeguridad Social</option>
+                                <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                </option>
+                                <option value="Sisben"> Sisben </option>
+                                <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                </option>
+                                <option value="Secretaria General">Secretaria General</option>
+                                <option value="Gestión Documental">Gestión Documental</option>
+                                <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
+                                <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6  col-2 m">
+                            <label for="heard">Dependencia Jurisdiccional *</label>
+                            <select name="genero" class="form-control" required>
+                                <option value="">Seleccione</option>
+                                <option value="Canal De Recepción">Canal De Recepción</option>
+                                <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                    SecretariaDesarrollo Económico Y Competitividad</option>
+                                <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria DeHacienda
+                                    Y Finanzas Públicas</option>
+                                <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
+                                <option value="Desarrollo Social">Desarrollo Social</option>
+                                <option value="Secretaria De Planeación">Secretaria De Planeación</option>
+                                <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
+                                </option>
+                                <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina DeSeguridad
+                                    Y Convivencia Ciudadana</option>
+                                <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud
+                                    YSeguridad Social</option>
+                                <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo YCultura
+                                </option>
+                                <option value="Sisben"> Sisben </option>
+                                <option value="Oficina De Transito Y Movilidad">Oficina De Transito YMovilidad
+                                </option>
+                                <option value="Secretaria General">Secretaria General</option>
+                                <option value="Gestión Documental">Gestión Documental</option>
+                                <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
+                                <option value="Programas Sociales Y Especiales">ProgramasSociales Y Especiales
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-12 col-sm-10 m">
+                            <label for="munici">Asunto *</label>
+                            <textarea rows="3" class="form-control" placeholder="Textarea">
+                                    100 Canal De Recepción
+                                    101 Despacho Alcalde
+                                    102 Oficina Jurídica
+                                    103 Secretaria Desarrollo Económico Y Competitividad
+                                    104 Secretaria De Hacienda Y Finanzas Públicas
+                                    105 Secretaria De Gobierno Y Desarrollo SocialSecretaria De Planeación  
+                                    106 Oficina De Ordenamiento Territorial Y Control Urbano
+                                    107 Oficina De Seguridad Y Convivencia 
+                                    108 Ciudadana
+                                    109 Secretaria De Salud Y Seguridad Social
+                                    110 Secretaria De Educación
+                                    111 Secretaria De Turismo Y Cultura
+                                    112 Sisben
+                                    113 Oficina De Transito Y Movilidad
+                                    114 Secretaria General
+                                    115 Gestión Documental
+                                    116 Comisaria De Familia
+                                    117 Oficina De Talento Humano
+                                    118 Programas Sociales Y Especiales
+                                    </textarea>
+                        </div>
+                        </p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-ingresar-elector" value="Lista de Dependencias">
+                <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Agregar Dependencia">
+                <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Editar">
+                <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+            </div>
+        </div>
+        <div class="modal fade bs-example-modal-ingresar-elector" tabindex=" -1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
+                            Entrada de Radicación
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="x_panelm">
+                            <p>
+                            <p><b class="moda" style="font-size: 24px;">Datos Remitente</b></p>
+                            <!-- boton primer modal -->
+                            <div style="margin-left: 75%;">
+                                <!--<button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                    data-toggle="modal" data-target=".bs-example-modal-ingresar-remitente">
+                                    Ingresar Remitente</button>-->
+                            </div>
+                            <div class="x_panelm2">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="table-responsive">
+                                            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Código</th>
+                                                        <th>Dependencia</th>
+                                                        <th>Sigla</th>
+                                                        <th>Estado</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">100</td>
+                                                        <td>INVIMA SAS</td>
+                                                        <td>INVM</td>
+                                                        <td>Activo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">100</td>
+                                                        <td>INVIMA SAS</td>
+                                                        <td>INVM</td>
+                                                        <td>Activo</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Asignar radicado">
+                                <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
 
 </div>
 <!--  modal ingresar radicacion -->
-<form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST"
-    class="row gy-2 gx-3 align-items-center">
+<form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST" class="row gy-2 gx-3 align-items-center">
     <div class="modal fade bs-example-modal-ingresar-elector" tabindex=" -1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -94,8 +395,7 @@ table>tbody>tr>td {
                     <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
                         Entrada de Radicación
                     </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">×</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -104,8 +404,7 @@ table>tbody>tr>td {
                         <p><b class="moda" style="font-size: 24px;">Datos Remitente</b></p>
                         <!-- boton primer modal -->
                         <div style="margin-left: 75%;">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal"
-                                data-target=".bs-example-modal-ingresar-remitente">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-remitente">
                                 Ingresar Remitente</button>
                         </div>
                         <div class="x_panelm2">
@@ -114,13 +413,11 @@ table>tbody>tr>td {
                                     <p>
                                     <div class="col-md-12  col-2 m">
                                         <label for="prinombre">Fecha de Ingreso *</label>
-                                        <input type="date" name="fecha" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="date" name="fecha" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-10 m">
                                         <label for="prinombre">Número Identificación *</label>
-                                        <input type="text" name="identificacion" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="heard">Tipo *</label>
@@ -134,34 +431,27 @@ table>tbody>tr>td {
 
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Nombres/Razón Social *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Apellidos/Sigla *</label>
-                                        <input type="text" name="cargo" class="form-control"
-                                            value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder=""
-                                            required>
+                                        <input type="text" name="cargo" class="form-control" value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Dirección *</label>
-                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-2 m">
                                         <label for="prinombre">Teléfono *</label>
-                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12 col-sm-10 m">
                                         <label for="prinombre">E-mail</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12 col-sm-2 m">
                                         <label for="prinombre">Dignatario/ Funcionario</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="heard">Continente *</label>
@@ -381,8 +671,7 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="heard">Departamento *</label>
-                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()"
-                                            required>
+                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()" required>
                                             <option value="">Seleccione</option>
                                             <option value="Amazonas">Amazonas</option>
                                             <option value="Antioquia">Antioquia</option>
@@ -429,13 +718,11 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Descripción Anexos *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Número de Folios *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="heard">Medio Recepción *</label>
@@ -450,8 +737,7 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Días de Término *</label>
-                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12  col-2 m">
                                         <label for="heard">Tipo Documental *</label>
@@ -540,8 +826,7 @@ table>tbody>tr>td {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                                value="Asignar radicado">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Asignar radicado">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                         </div>
                     </div>
@@ -556,8 +841,7 @@ table>tbody>tr>td {
                     <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
                         Ingresar Remitente
                     </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">×</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -571,25 +855,20 @@ table>tbody>tr>td {
                                     <p>
                                     <div class="col-md-12 col-2 m">
                                         <label for="prinombre">Nombres *</label>
-                                        <input type="text" name="nombre" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="nombre" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
 
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Fecha de Ingreso *</label>
-                                        <input type="date" name="fecha" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="date" name="fecha" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Cargo *</label>
-                                        <input type="text" name="cargo" class="form-control"
-                                            value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder=""
-                                            required>
+                                        <input type="text" name="cargo" class="form-control" value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Cedula*</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="heard">Genero*</label>
@@ -604,64 +883,52 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Nombres *</label>
-                                        <input type="text" name="nombre" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="nombre" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Apellidos *</label>
-                                        <input type="text" name="apellidos" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="apellidos" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-12 col-sm-10 m">
                                         <label for="prinombre">Correo Electronico</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Teléfono *</label>
-                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Celular *</label>
-                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">WhatsApp *</label>
-                                        <input type="text" name="whats" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="whats" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Dirección *</label>
-                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Barrio *</label>
-                                        <input type="text" name="barrio" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="barrio" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Localidad *</label>
-                                        <input type="text" name="locali" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="locali" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Comuna *</label>
-                                        <input type="text" name="comuna" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="comuna" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Corregimiento *</label>
-                                        <input type="text" name="corregimien" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="corregimien" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
 
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="heard">Departamento *</label>
-                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()"
-                                            required>
+                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()" required>
                                             <option value="">Seleccione</option>
                                             <option value="Amazonas">Amazonas</option>
                                             <option value="Antioquia">Antioquia</option>
@@ -709,8 +976,7 @@ table>tbody>tr>td {
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                                value="Guardar">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Guardar">
                         </div>
                     </div>
                 </div>
