@@ -16,6 +16,12 @@
     <!-- azia CSS -->
     <link rel="stylesheet" href="../css/azia.css">
     <!--    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx           -->
+
+    <!-- Incluye SweetAlert2 CSS y JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+
+
         
 
     

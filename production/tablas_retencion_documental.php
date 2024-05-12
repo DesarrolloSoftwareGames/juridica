@@ -76,11 +76,37 @@ table>tbody>tr>td {
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
 <div class="container" style="margin: 100px 0px 100px 420px ">
 
-    <div class="row">
-        
+<!-- Inicio modulo de tablas de retencion documentales -->
 
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        <th><h1>Administración - Tablas de retención documental</h1></th>
+        </tr>         
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#">Tipos documentales</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">Series</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Subseries</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Matriz relación</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Asignación TRD Area</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Listado tablas de retención documental</a></td>
+            </tr>
+    </tbody>
+</table>
+<!-- Fin de modulo de tablas de retencion documentales -->
 
-    </div>
 </div>
 
 </div>

@@ -76,14 +76,175 @@ table>tbody>tr>td {
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
 <div class="container" style="margin: 100px 0px 100px 420px ">
 
-    <div class="row">
-        
+<!-- Inicio de Módulo Transferencias Documentales-->
 
+    <h1>Módulo Transferencias Documentales</h1>
 
+        <p>Los expedientes que se muestran en este módulo son los que ya fueron archivados físicamente, es decir los que ya tienen una ubicación topográfica.</p>
+
+    <form action="" method="post" class="form-horizontal">
+      <div class="form-row align-items-center">
+        <div class="col-auto">
+          <label for="dependencia" class="control-label">Dependencia:</label>
+          <select id="dependencia" name="dependencia" class="form-control">
+                        <option value="">Seleccione una dependencia</option>
+                        <option value="CANAL DE RECEPCIÓN">CANAL DE RECEPCIÓN</option>
+                        <option value="DESPACHO ALCALDE">DESPACHO ALCALDE</option>
+                        <option value="OFICINA JURIDICA">OFICINA JURIDICA</option>
+                        <option value="SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD">SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD</option>
+                        <option value="SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS">SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS</option>
+                        <option value="SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL">SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL</option>
+                        <option value="SECCRETARIA DE PLANEACION">SECCRETARIA DE PLANEACION</option>
+                        <option value="OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO">OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO</option>
+                        <option value="OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA">OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA</option>
+                        <option value="SECRETARIA DE SALUD Y SEGURIDAD SOCIAL">SECRETARIA DE SALUD Y SEGURIDAD SOCIAL</option>
+                        <option value="SECRETARIA DE EDUCACION">SECRETARIA DE EDUCACION</option>
+                        <option value="SECRETARIA DE TURISMO Y CULTURA">SECRETARIA DE TURISMO Y CULTURA</option>
+                        <option value="SISBEN">SISBEN</option>
+                        <option value="OFICINA DE TRANSITO Y MOVILIDAD">OFICINA DE TRANSITO Y MOVILIDAD</option>
+                        <option value="SECRETARIA GENERAL">SECRETARIA GENERAL</option>
+                        <option value="GESTION DOCUMENTAL">GESTION DOCUMENTAL</option>
+                        <option value="COMISARIA DE FAMILIA">COMISARIA DE FAMILIA</option>
+                        <option value="OFICINA DE TALENTO HUMANO">OFICINA DE TALENTO HUMANO</option>
+                        <option value="PROGRAMAS SOCIALES Y ESPECIALES">PROGRAMAS SOCIALES Y ESPECIALES</option>
+                </select>
+        </div>
+
+        <div class="col-auto">
+          <label for="usuario" class="control-label">Usuario:</label>
+          <select id="usuario" name="usuario" class="form-control">
+            <option value="">Seleccione Usuario</option>
+            <option value=usuarioprueba">Usuario de Pruebas</option>
+          </select>
+        </div>
+
+        <div class="col-auto">
+          <label for="fecha_archivo" class="control-label">Fecha de archivo:</label>
+          <input type="date" id="fecha_archivo" name="fecha_archivo" class="form-control">
+        </div>
+
+        <div class="col-auto">
+          <button id="btnBuscar" type="button" class="btn btn-primary mt-lg-4" onclick="buscarDatos()">Buscar</button>
+        </div>
+      </div>
+    </form>
+    <div id="resultadosBusqueda" class="mt-3">
+        <div class="d-flex justify-content-between">
+            <h4>Resultados de la búsqueda</h4>
+            <div class="input-group mb-3" style="width: 20%;">
+                <input id="busquedaInput" type="text" class="form-control" placeholder="Buscar en la tabla...">
+                <div class="input-group-append">
+                    <button id="buscarBtn" class="btn btn-outline-secondary" type="button">Buscar</button>
+                </div>
+            </div>
+        </div>
+        <table id="tablaResultados" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Número Radicado</th>
+                    <th>Fecha Radicación</th>
+                    <th>Número Expediente</th>
+                    <th>Responsable</th>
+                    <th>Nombre</th>
+                    <th>Asunto</th>
+                    <th>Serie</th>
+                    <th>Tipo</th>
+                    <th>Nombre Funcionario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí irán los datos de la tabla -->
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-end mt-3">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- btn trasferir -->
+    <div class="d-flex align-items-center justify-content-center">
+        <button id="TransferBtn" class="btn btn-success btn-lg" type="button" onclick="limpiarTablaResultados()">Transferir</button>
     </div>
 </div>
+<!-- fin de Módulo Transferencias Documentales-->
 
 </div>
+
+<!-- JS para mostrar resultados de busqueda de ejemplo -->
+<script>
+
+function limpiarTablaResultados() {
+  const tablaResultados = document.getElementById('tablaResultados').getElementsByTagName('tbody')[0];
+  tablaResultados.innerHTML = '';
+    // alert("Docuemnto trnsferido con exito");
+    Swal.fire({
+            title: 'Documento transferido con éxito',
+            text: 'El documento se ha transferido correctamente.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
+}
+
+        function buscarDatos() {
+            // Aquí puedes modificar la lógica para cargar los datos reales desde una fuente de datos
+            var datosEjemplo = [
+                {
+                    numeroRadicado: '0001',
+                    fechaRadicacion: '2024-05-12',
+                    numeroExpediente: 'EXP-001',
+                    responsable: 'Juan Perez',
+                    nombre: 'Documento 1',
+                    asunto: 'Asunto 1',
+                    serie: 'Serie 1',
+                    tipo: 'Entrada',
+                    nombreFuncionario: 'Ana Rodriguez'
+                },
+                {
+                    numeroRadicado: '0002',
+                    fechaRadicacion: '2024-05-13',
+                    numeroExpediente: 'EXP-002',
+                    responsable: 'María Gomez',
+                    nombre: 'Documento 2',
+                    asunto: 'Asunto 2',
+                    serie: 'Serie 2',
+                    tipo: 'Salida',
+                    nombreFuncionario: 'Luis Hernandez'
+                }
+            ];
+
+            var tabla = document.getElementById('tablaResultados').getElementsByTagName('tbody')[0];
+            tabla.innerHTML = ''; // Limpiar contenido previo de la tabla
+
+            datosEjemplo.forEach(function(dato) {
+                var fila = tabla.insertRow();
+                var checkboxCell = fila.insertCell();
+                var checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkboxCell.appendChild(checkbox);
+
+                fila.insertCell().textContent = dato.numeroRadicado;
+                fila.insertCell().textContent = dato.fechaRadicacion;
+                fila.insertCell().textContent = dato.numeroExpediente;
+                fila.insertCell().textContent = dato.responsable;
+                fila.insertCell().textContent = dato.nombre;
+                fila.insertCell().textContent = dato.asunto;
+                fila.insertCell().textContent = dato.serie;
+                fila.insertCell().textContent = dato.tipo;
+                fila.insertCell().textContent = dato.nombreFuncionario;
+            });
+        }
+    </script>
+
+<!--Fin del codigo JS para mostrar datos -->
 <!--  modal ingresar radicacion -->
 <form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST"
     class="row gy-2 gx-3 align-items-center">
