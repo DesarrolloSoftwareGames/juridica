@@ -74,7 +74,7 @@ table>tbody>tr>td {
 <!--
 <button type="button" class="btn btn-primary boton" data-toggle="modal"
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
-<div class="container" style="margin: 100px 0px 100px 420px ">
+<div class="container" style="margin-top: 100px; margin-bottom: 100px; ">
 
 <!-- Inicio modulo de tablas de retencion documentales -->
 

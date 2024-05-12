@@ -9,12 +9,12 @@ $codigousuario = $aux[0];
 
 ///si estoy dentro////
 if ($galleta != NULL  && $_SESSION['id']) {
-    $usuario=$_SESSION['LOGIN'];
-    $tipousuario=$_SESSION['TIPOUSUARIO'];
-    $query = mysqli_query($conn, "select * from registro where NomUsuario='$usuario' "); 
+    $usuario = $_SESSION['LOGIN'];
+    $tipousuario = $_SESSION['TIPOUSUARIO'];
+    $query = mysqli_query($conn, "select * from registro where NomUsuario='$usuario' ");
     $row = mysqli_fetch_row($query);
-    $nombredeusuario=$row[2]." ".$row[4];
-    $foto=$row[12];
+    $nombredeusuario = $row[2] . " " . $row[4];
+    $foto = $row[12];
 } //si entro
 
 else {
@@ -28,36 +28,37 @@ else {
 <?php include('includes/navigation.php'); ?>
 
 <style>
-header {
-    background: #8E2DE2;
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
-}
+    header {
+        background: #8E2DE2;
+        background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+        background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    }
 
-/*estilos para la tabla  background-color: #337ab7 !important;*/
-table th {
+    /*estilos para la tabla  background-color: #337ab7 !important;*/
+    table th {
 
-    color: white;
-}
+        color: white;
+    }
 
-table>tbody>tr>td {
-    vertical-align: middle !important;
-}
+    table>tbody>tr>td {
+        vertical-align: middle !important;
+    }
 
-/*para alinear los botones y cuadro de busqueda*/
-.btn-group,
-.btn-group-vertical {
-    /*position: absolute !important;*/
-    margin-top: 100px;
-}
-.tam {
-    width: 100px;
-    height: 100px;
-}
+    /*para alinear los botones y cuadro de busqueda*/
+    .btn-group,
+    .btn-group-vertical {
+        /*position: absolute !important;*/
+        margin-top: 100px;
+    }
 
-.pos {
-    margin: 200px 10px 50px 10px;
-}
+    .tam {
+        width: 100px;
+        height: 100px;
+    }
+
+    .pos {
+        margin: 200px 10px 50px 10px;
+    }
 </style>
 <!-- xxxxxxxxxxxxxxxxx para los botones de la tabla exportar, pdf, imprimir xxxxxxxxxxxxxxxxxxxxxxx -->
 <!--datables CSS básico-->
@@ -66,130 +67,209 @@ table>tbody>tr>td {
 <link rel="stylesheet" type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 
 <!--font awesome con CDN-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 <!-- xxxxxxxxxxxxxxxxxx  para los botones de la tabla exportar, pdf, imprimir xxxxxxxxxxxxxxxxxxxxxxx -->
 
 <!--
 <button type="button" class="btn btn-primary boton" data-toggle="modal"
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
-<div class="container" style="margin: 100px 0px 100px 420px ">
+<div class="container" style="margin-top: 100px; margin-bottom: 100px;">
 
-<!-- Inicio modulo de Consultas generales-->
-<nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <a class="btn btn-primary m-1" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Búsqueda Clásica</a>
-    <a class="btn btn-info m-1" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Buscar Expedientes</a>
-  </div>
-</nav>
-<div class="tab-content mt-5" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <!-- Inicio modulo de Consultas generales-->
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="btn btn-primary m-1" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Búsqueda Clásica</a>
+            <a class="btn btn-info m-1" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Buscar Expedientes</a>
+        </div>
+    </nav>
+    <div class="tab-content mt-5" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-  <h1>Búsqueda Clásica</h1>   
-<div class="container mt-2">
-        <form action="#">
-            <div class="form-group row">
-                <label for="radicado" class="col-sm-2 col-form-label">Radicado:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="radicado" name="radicado">
-                </div>
+            <h1>Búsqueda Clásica</h1>
+            <div class="container mt-2">
+                <form action="#">
+                    <div class="form-group row">
+                        <label for="radicado" class="col-sm-2 col-form-label">Radicado:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="radicado" name="radicado">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="identificacion" class="col-sm-2 col-form-label">Identificación (T.I.C.C,Nit):</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="identificacion" name="identificacion">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="expediente" class="col-sm-2 col-form-label">Expediente:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="expediente" name="expediente">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="filtrar_por" class="col-sm-2 col-form-label">Filtrar por:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="filtrar_por" name="filtrar_por">
+                                <option value="">Todos</option>
+                                <option value="radicado">Radicado</option>
+                                <option value="identificacion">Identificación</option>
+                                <option value="expediente">Expediente</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-10 offset-sm-2">
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="ver_en_listado" name="ver_en_listado">
+                                <label class="form-check-label" for="ver_en_listado">Ver en Listado</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="buscar_ciudadanos" name="buscar_ciudadanos">
+                                <label class="form-check-label" for="buscar_ciudadanos">Buscar Ciudadanos</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="buscar_en_terceros" name="buscar_en_terceros">
+                                <label class="form-check-label" for="buscar_en_terceros">Buscar en Terceros</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="buscar_en_empresas" name="buscar_en_empresas">
+                                <label class="form-check-label" for="buscar_en_empresas">Buscar en Empresas</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" class="form-check-input" id="buscar_funcionarios" name="buscar_funcionarios">
+                                <label class="form-check-label" for="buscar_funcionarios">Buscar Funcionarios</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="buscar_por_radicados" class="col-sm-2 col-form-label">Buscar en Radicados:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="buscar_por_radicados" name="buscar_por_radicados">
+                                <option value="">Todos los Tipos (-1,-2,-3,-5,...)</option>
+                                <option value="tipo1">Entrada</option>
+                                <option value="tipo2">Pqrsd</option>
+                                <option value="tipo3">Salida</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="fecha_desde" class="col-sm-2 col-form-label">Fecha desde:</label>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="fecha_desde" name="fecha_desde">
+                        </div>
+                        <label for="fecha_hasta" class="col-sm-2 col-form-label">Fecha hasta:</label>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="fecha_hasta" name="fecha_hasta">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="tipo_documento" class="col-sm-2 col-form-label">Tipo de documento:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="tipo_documento" name="tipo_documento">
+                                <option value="">Seleccione un tipo de documento</option>
+                                <option value="comunicacion_oficial">Comunicación oficial</option>
+                                <option value="expediente">Expediente</option>
+                                <option value="acta_anulacion_radicado">Acta de anulación de radicado</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dependencia" class="col-sm-2 col-form-label">Dependencia:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="dependencia" name="dependencia">
+                                <option value="">Seleccione una dependencia</option>
+                                <option value="CANAL DE RECEPCIÓN">CANAL DE RECEPCIÓN</option>
+                                <option value="DESPACHO ALCALDE">DESPACHO ALCALDE</option>
+                                <option value="OFICINA JURIDICA">OFICINA JURIDICA</option>
+                                <option value="SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD">SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD</option>
+                                <option value="SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS">SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS</option>
+                                <option value="SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL">SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL</option>
+                                <option value="SECCRETARIA DE PLANEACION">SECCRETARIA DE PLANEACION</option>
+                                <option value="OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO">OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO</option>
+                                <option value="OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA">OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA</option>
+                                <option value="SECRETARIA DE SALUD Y SEGURIDAD SOCIAL">SECRETARIA DE SALUD Y SEGURIDAD SOCIAL</option>
+                                <option value="SECRETARIA DE EDUCACION">SECRETARIA DE EDUCACION</option>
+                                <option value="SECRETARIA DE TURISMO Y CULTURA">SECRETARIA DE TURISMO Y CULTURA</option>
+                                <option value="SISBEN">SISBEN</option>
+                                <option value="OFICINA DE TRANSITO Y MOVILIDAD">OFICINA DE TRANSITO Y MOVILIDAD</option>
+                                <option value="SECRETARIA GENERAL">SECRETARIA GENERAL</option>
+                                <option value="GESTION DOCUMENTAL">GESTION DOCUMENTAL</option>
+                                <option value="COMISARIA DE FAMILIA">COMISARIA DE FAMILIA</option>
+                                <option value="OFICINA DE TALENTO HUMANO">OFICINA DE TALENTO HUMANO</option>
+                                <option value="PROGRAMAS SOCIALES Y ESPECIALES">PROGRAMAS SOCIALES Y ESPECIALES</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10 offset-sm-2">
+                            <button type="button" class="btn btn-primary" onclick="mostrarResultados()">Búsqueda</button>
+                            <button type="button" class="btn btn-secondary" onclick="limpiarTablaResultados()">Limpiar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-
-            <div class="form-group row">
-                <label for="identificacion" class="col-sm-2 col-form-label">Identificación (T.I.C.C,Nit):</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="identificacion" name="identificacion">
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <h1>Búsqueda de Expedientes</h1>
+            <form action="#">
+                <div class="form-group">
+                    <label for="numeroExpediente">Número del Expediente</label>
+                    <input type="text" class="form-control" id="numeroExpediente" placeholder="Ingrese el número del expediente">
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="expediente" class="col-sm-2 col-form-label">Expediente:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="expediente" name="expediente">
+                <div class="form-group">
+                    <label for="nombreExpediente">Nombre del Expediente</label>
+                    <input type="text" class="form-control" id="nombreExpediente" placeholder="Ingrese el nombre del expediente">
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="filtrar_por" class="col-sm-2 col-form-label">Filtrar por:</label>
-                <div class="col-sm-10">
-                    <select class="form-control" id="filtrar_por" name="filtrar_por">
-                        <option value="">Todos</option>
-                        <option value="radicado">Radicado</option>
-                        <option value="identificacion">Identificación</option>
-                        <option value="expediente">Expediente</option>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="fechaRadicacionInicial">Fecha radicación inicial</label>
+                        <input type="date" class="form-control" id="fechaRadicacionInicial">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="fechaRadicacionFinal">Fecha radicación final</label>
+                        <input type="date" class="form-control" id="fechaRadicacionFinal">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serie">Serie</label>
+                    <select class="form-control" id="serie">
+                        <option value="">Seleccione</option>
+                        <option value="serie1">Serie 1</option>
+                        <option value="serie2">Serie 2</option>
+                        <option value="serie3">Serie 3</option>
                     </select>
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <div class="col-sm-10 offset-sm-2">
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="ver_en_listado" name="ver_en_listado">
-                        <label class="form-check-label" for="ver_en_listado">Ver en Listado</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="buscar_ciudadanos" name="buscar_ciudadanos">
-                        <label class="form-check-label" for="buscar_ciudadanos">Buscar Ciudadanos</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="buscar_en_terceros" name="buscar_en_terceros">
-                        <label class="form-check-label" for="buscar_en_terceros">Buscar en Terceros</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="buscar_en_empresas" name="buscar_en_empresas">
-                        <label class="form-check-label" for="buscar_en_empresas">Buscar en Empresas</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" class="form-check-input" id="buscar_funcionarios" name="buscar_funcionarios">
-                        <label class="form-check-label" for="buscar_funcionarios">Buscar Funcionarios</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group row">
-            <label for="buscar_por_radicados" class="col-sm-2 col-form-label">Buscar en Radicados:</label>
-                <div class="col-sm-10">
-                    <select class="form-control" id="buscar_por_radicados" name="buscar_por_radicados">
-                        <option value="">Todos los Tipos (-1,-2,-3,-5,...)</option>
-                        <option value="tipo1">Entrada</option>
-                        <option value="tipo2">Pqrsd</option>
-                        <option value="tipo3">Salida</option>
+                <div class="form-group">
+                    <label for="subserie">SubSerie</label>
+                    <select class="form-control" id="subserie">
+                        <option value="">Seleccione</option>
+                        <option value="subserie1">SubSerie 1</option>
+                        <option value="subserie2">SubSerie 2</option>
+                        <option value="subserie3">SubSerie 3</option>
                     </select>
                 </div>
-            </div>
-            
-            <div class="form-group row">
-                <label for="fecha_desde" class="col-sm-2 col-form-label">Fecha desde:</label>
-                <div class="col-sm-4">
-                    <input type="date" class="form-control" id="fecha_desde" name="fecha_desde">
-                </div>
-                <label for="fecha_hasta" class="col-sm-2 col-form-label">Fecha hasta:</label>
-                <div class="col-sm-4">
-                    <input type="date" class="form-control" id="fecha_hasta" name="fecha_hasta">
-                </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="tipo_documento" class="col-sm-2 col-form-label">Tipo de documento:</label>
-                <div class="col-sm-10">
-                    <select class="form-control" id="tipo_documento" name="tipo_documento">
-                        <option value="">Seleccione un tipo de documento</option>
-                        <option value="comunicacion_oficial">Comunicación oficial</option>
-                        <option value="expediente">Expediente</option>
-                        <option value="acta_anulacion_radicado">Acta de anulación de radicado</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="dependencia" class="col-sm-2 col-form-label">Dependencia:</label>
-                <div class="col-sm-10">
-                    <select class="form-control" id="dependencia" name="dependencia">
+                <div class="form-group">
+                    <label for="dependenciaDuenia">Dependencia dueña del expediente</label>
+                    <select class="form-control" id="dependenciaDuenia" name="dependencia">
                         <option value="">Seleccione una dependencia</option>
                         <option value="CANAL DE RECEPCIÓN">CANAL DE RECEPCIÓN</option>
                         <option value="DESPACHO ALCALDE">DESPACHO ALCALDE</option>
@@ -212,208 +292,126 @@ table>tbody>tr>td {
                         <option value="PROGRAMAS SOCIALES Y ESPECIALES">PROGRAMAS SOCIALES Y ESPECIALES</option>
                     </select>
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-10 offset-sm-2">
+
                 <button type="button" class="btn btn-primary" onclick="mostrarResultados()">Búsqueda</button>
-                <button type="button" class="btn btn-secondary"  onclick="limpiarTablaResultados()">Limpiar</button>
-                </div>
-            </div>
-        </form>
-    </div>
-  </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-    <h1>Búsqueda de Expedientes</h1>
-    <form action="#">
-      <div class="form-group">
-        <label for="numeroExpediente">Número del Expediente</label>
-        <input type="text" class="form-control" id="numeroExpediente" placeholder="Ingrese el número del expediente">
-      </div>
-
-      <div class="form-group">
-        <label for="nombreExpediente">Nombre del Expediente</label>
-        <input type="text" class="form-control" id="nombreExpediente" placeholder="Ingrese el nombre del expediente">
-      </div>
-
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="fechaRadicacionInicial">Fecha radicación inicial</label>
-          <input type="date" class="form-control" id="fechaRadicacionInicial">
+                <button type="button" class="btn btn-secondary" onclick="limpiarTablaResultados()">Limpiar</button>
+            </form>
         </div>
 
-        <div class="form-group col-md-6">
-          <label for="fechaRadicacionFinal">Fecha radicación final</label>
-          <input type="date" class="form-control" id="fechaRadicacionFinal">
+        <div id="resultadosBusqueda" class="mt-3">
+            <h2>Resultados de la búsqueda</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Número Radicado</th>
+                        <th>Fecha Radicación</th>
+                        <th>Número Expediente</th>
+                        <th>Responsable</th>
+                        <th>Nombre</th>
+                        <th>Asunto</th>
+                        <th>Serie</th>
+                        <th>Número Asociado</th>
+                        <th>Tipo</th>
+                        <th>Nombre Funcionario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
-      </div>
-
-      <div class="form-group">
-        <label for="serie">Serie</label>
-        <select class="form-control" id="serie">
-          <option value="">Seleccione</option>
-          <option value="serie1">Serie 1</option>
-          <option value="serie2">Serie 2</option>
-          <option value="serie3">Serie 3</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="subserie">SubSerie</label>
-        <select class="form-control" id="subserie">
-          <option value="">Seleccione</option>
-          <option value="subserie1">SubSerie 1</option>
-          <option value="subserie2">SubSerie 2</option>
-          <option value="subserie3">SubSerie 3</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="dependenciaDuenia">Dependencia dueña del expediente</label>
-            <select class="form-control" id="dependenciaDuenia" name="dependencia">
-                        <option value="">Seleccione una dependencia</option>
-                        <option value="CANAL DE RECEPCIÓN">CANAL DE RECEPCIÓN</option>
-                        <option value="DESPACHO ALCALDE">DESPACHO ALCALDE</option>
-                        <option value="OFICINA JURIDICA">OFICINA JURIDICA</option>
-                        <option value="SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD">SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD</option>
-                        <option value="SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS">SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS</option>
-                        <option value="SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL">SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL</option>
-                        <option value="SECCRETARIA DE PLANEACION">SECCRETARIA DE PLANEACION</option>
-                        <option value="OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO">OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO</option>
-                        <option value="OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA">OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA</option>
-                        <option value="SECRETARIA DE SALUD Y SEGURIDAD SOCIAL">SECRETARIA DE SALUD Y SEGURIDAD SOCIAL</option>
-                        <option value="SECRETARIA DE EDUCACION">SECRETARIA DE EDUCACION</option>
-                        <option value="SECRETARIA DE TURISMO Y CULTURA">SECRETARIA DE TURISMO Y CULTURA</option>
-                        <option value="SISBEN">SISBEN</option>
-                        <option value="OFICINA DE TRANSITO Y MOVILIDAD">OFICINA DE TRANSITO Y MOVILIDAD</option>
-                        <option value="SECRETARIA GENERAL">SECRETARIA GENERAL</option>
-                        <option value="GESTION DOCUMENTAL">GESTION DOCUMENTAL</option>
-                        <option value="COMISARIA DE FAMILIA">COMISARIA DE FAMILIA</option>
-                        <option value="OFICINA DE TALENTO HUMANO">OFICINA DE TALENTO HUMANO</option>
-                        <option value="PROGRAMAS SOCIALES Y ESPECIALES">PROGRAMAS SOCIALES Y ESPECIALES</option>
-                </select>
-        </div>
-
-      <button type="button" class="btn btn-primary" onclick="mostrarResultados()">Búsqueda</button>
-      <button type="button" class="btn btn-secondary"  onclick="limpiarTablaResultados()">Limpiar</button>
-    </form>
     </div>
 
-    <div id="resultadosBusqueda" class="mt-3">
-        <h2>Resultados de la búsqueda</h2>
-        <table class="table table-striped table-bordered">
-            <thead>
-            <tr>
-                <th>Número Radicado</th>
-                <th>Fecha Radicación</th>
-                <th>Número Expediente</th>
-                <th>Responsable</th>
-                <th>Nombre</th>
-                <th>Asunto</th>
-                <th>Serie</th>
-                <th>Número Asociado</th>
-                <th>Tipo</th>
-                <th>Nombre Funcionario</th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
-</div>
+    <!-- codigo Js para los resultados de busqueda -->
+    <script>
+        function limpiarTablaResultados() {
+            const tablaResultados = document.getElementById('resultadosBusqueda').getElementsByTagName('tbody')[0];
+            tablaResultados.innerHTML = '';
+        }
 
-<!-- codigo Js para los resultados de busqueda -->
-<script>
-function limpiarTablaResultados() {
-  const tablaResultados = document.getElementById('resultadosBusqueda').getElementsByTagName('tbody')[0];
-  tablaResultados.innerHTML = '';
-}
+        function mostrarResultados() {
+            // Obtener los datos de la búsqueda
+            const numeroExpediente = document.getElementById('numeroExpediente').value;
+            const nombreExpediente = document.getElementById('nombreExpediente').value;
+            const fechaRadicacionInicial = document.getElementById('fechaRadicacionInicial').value;
+            const fechaRadicacionFinal = document.getElementById('fechaRadicacionFinal').value;
+            const serie = document.getElementById('serie').value;
+            const subserie = document.getElementById('subserie').value;
+            const dependenciaDuenia = document.getElementById('dependenciaDuenia').value;
 
-function mostrarResultados() {
-  // Obtener los datos de la búsqueda
-  const numeroExpediente = document.getElementById('numeroExpediente').value;
-  const nombreExpediente = document.getElementById('nombreExpediente').value;
-  const fechaRadicacionInicial = document.getElementById('fechaRadicacionInicial').value;
-  const fechaRadicacionFinal = document.getElementById('fechaRadicacionFinal').value;
-  const serie = document.getElementById('serie').value;
-  const subserie = document.getElementById('subserie').value;
-  const dependenciaDuenia = document.getElementById('dependenciaDuenia').value;
+            // Simular la consulta a la base de datos (reemplazar con la consulta real)
+            const resultadosBusqueda = [{
+                    numeroRadicado: '2023-E-12345',
+                    fechaRadicacion: '2023-11-14',
+                    numeroExpediente: 'EXP-12345',
+                    responsable: 'Juan Pérez',
+                    nombre: 'Solicitud de licencia',
+                    asunto: 'Permisos',
+                    serie: 'Serie 1',
+                    numeroRadicadoAsociado: '2023-E-67890',
+                    tipo: 'Memorando',
+                    nombreFuncionario: 'María Gómez'
+                },
+                {
+                    numeroRadicado: '2024-E-56789',
+                    fechaRadicacion: '2024-05-11',
+                    numeroExpediente: 'EXP-56789',
+                    responsable: 'Ana López',
+                    nombre: 'Informe de actividades',
+                    asunto: 'Seguimiento proyecto X',
+                    serie: 'Serie 2',
+                    numeroRadicadoAsociado: '2024-E-23456',
+                    tipo: 'Carta',
+                    nombreFuncionario: 'Carlos Ramírez'
+                },
+                // Agregar más filas de resultados según sea necesario
+            ];
 
-  // Simular la consulta a la base de datos (reemplazar con la consulta real)
-  const resultadosBusqueda = [
-    {
-      numeroRadicado: '2023-E-12345',
-      fechaRadicacion: '2023-11-14',
-      numeroExpediente: 'EXP-12345',
-      responsable: 'Juan Pérez',
-      nombre: 'Solicitud de licencia',
-      asunto: 'Permisos',
-      serie: 'Serie 1',
-      numeroRadicadoAsociado: '2023-E-67890',
-      tipo: 'Memorando',
-      nombreFuncionario: 'María Gómez'
-    },
-    {
-      numeroRadicado: '2024-E-56789',
-      fechaRadicacion: '2024-05-11',
-      numeroExpediente: 'EXP-56789',
-      responsable: 'Ana López',
-      nombre: 'Informe de actividades',
-      asunto: 'Seguimiento proyecto X',
-      serie: 'Serie 2',
-      numeroRadicadoAsociado: '2024-E-23456',
-      tipo: 'Carta',
-      nombreFuncionario: 'Carlos Ramírez'
-    },
-    // Agregar más filas de resultados según sea necesario
-  ];
+            // Limpiar la tabla de resultados previos
+            const tablaResultados = document.getElementById('resultadosBusqueda').getElementsByTagName('tbody')[0];
+            tablaResultados.innerHTML = '';
 
-  // Limpiar la tabla de resultados previos
-  const tablaResultados = document.getElementById('resultadosBusqueda').getElementsByTagName('tbody')[0];
-  tablaResultados.innerHTML = '';
+            // Llenar la tabla con los nuevos resultados
+            for (const resultado of resultadosBusqueda) {
+                const fila = tablaResultados.insertRow();
 
-  // Llenar la tabla con los nuevos resultados
-  for (const resultado of resultadosBusqueda) {
-    const fila = tablaResultados.insertRow();
+                const celdaNumeroRadicado = fila.insertCell();
+                celdaNumeroRadicado.textContent = resultado.numeroRadicado;
 
-    const celdaNumeroRadicado = fila.insertCell();
-    celdaNumeroRadicado.textContent = resultado.numeroRadicado;
+                const celdaFechaRadicacion = fila.insertCell();
+                celdaFechaRadicacion.textContent = resultado.fechaRadicacion;
 
-    const celdaFechaRadicacion = fila.insertCell();
-    celdaFechaRadicacion.textContent = resultado.fechaRadicacion;
+                const celdaNumeroExpediente = fila.insertCell();
+                celdaNumeroExpediente.textContent = resultado.numeroExpediente;
 
-    const celdaNumeroExpediente = fila.insertCell();
-    celdaNumeroExpediente.textContent = resultado.numeroExpediente;
+                const celdaResponsable = fila.insertCell();
+                celdaResponsable.textContent = resultado.responsable;
 
-    const celdaResponsable = fila.insertCell();
-    celdaResponsable.textContent = resultado.responsable;
+                const celdaNombre = fila.insertCell();
+                celdaNombre.textContent = resultado.nombre;
 
-    const celdaNombre = fila.insertCell();
-    celdaNombre.textContent = resultado.nombre;
+                const celdaAsunto = fila.insertCell();
+                celdaAsunto.textContent = resultado.asunto;
 
-    const celdaAsunto = fila.insertCell();
-    celdaAsunto.textContent = resultado.asunto;
+                const celdaSerie = fila.insertCell();
+                celdaSerie.textContent = resultado.serie;
 
-    const celdaSerie = fila.insertCell();
-    celdaSerie.textContent = resultado.serie;
+                const celdaNumeroRadicadoAsociado = fila.insertCell();
+                celdaNumeroRadicadoAsociado.textContent = resultado.numeroRadicadoAsociado;
 
-    const celdaNumeroRadicadoAsociado = fila.insertCell();
-    celdaNumeroRadicadoAsociado.textContent = resultado.numeroRadicadoAsociado;
+                const celdaTipo = fila.insertCell();
+                celdaTipo.textContent = resultado.tipo;
 
-    const celdaTipo = fila.insertCell();
-    celdaTipo.textContent = resultado.tipo;
-
-    const celdaNombreFuncionario = fila.insertCell();
-    celdaNombreFuncionario.textContent = resultado.nombreFuncionario;
-  }
-}
-</script>
-<!-- Fin de modulo de tablas de Consultas generales -->
+                const celdaNombreFuncionario = fila.insertCell();
+                celdaNombreFuncionario.textContent = resultado.nombreFuncionario;
+            }
+        }
+    </script>
+    <!-- Fin de modulo de tablas de Consultas generales -->
 </div>
 
 </div>
 <!--  modal ingresar radicacion -->
-<form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST"
-    class="row gy-2 gx-3 align-items-center">
+<form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST" class="row gy-2 gx-3 align-items-center">
     <div class="modal fade bs-example-modal-ingresar-elector" tabindex=" -1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -421,8 +419,7 @@ function mostrarResultados() {
                     <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
                         Entrada de Radicación
                     </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">×</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -431,8 +428,7 @@ function mostrarResultados() {
                         <p><b class="moda" style="font-size: 24px;">Datos Remitente</b></p>
                         <!-- boton primer modal -->
                         <div style="margin-left: 75%;">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal"
-                                data-target=".bs-example-modal-ingresar-remitente">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-remitente">
                                 Ingresar Remitente</button>
                         </div>
                         <div class="x_panelm2">
@@ -441,13 +437,11 @@ function mostrarResultados() {
                                     <p>
                                     <div class="col-md-12  col-2 m">
                                         <label for="prinombre">Fecha de Ingreso *</label>
-                                        <input type="date" name="fecha" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="date" name="fecha" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-10 m">
                                         <label for="prinombre">Número Identificación *</label>
-                                        <input type="text" name="identificacion" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="heard">Tipo *</label>
@@ -461,34 +455,27 @@ function mostrarResultados() {
 
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Nombres/Razón Social *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Apellidos/Sigla *</label>
-                                        <input type="text" name="cargo" class="form-control"
-                                            value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder=""
-                                            required>
+                                        <input type="text" name="cargo" class="form-control" value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Dirección *</label>
-                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-2 m">
                                         <label for="prinombre">Teléfono *</label>
-                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12 col-sm-10 m">
                                         <label for="prinombre">E-mail</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12 col-sm-2 m">
                                         <label for="prinombre">Dignatario/ Funcionario</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="heard">Continente *</label>
@@ -708,8 +695,7 @@ function mostrarResultados() {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="heard">Departamento *</label>
-                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()"
-                                            required>
+                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()" required>
                                             <option value="">Seleccione</option>
                                             <option value="Amazonas">Amazonas</option>
                                             <option value="Antioquia">Antioquia</option>
@@ -756,13 +742,11 @@ function mostrarResultados() {
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Descripción Anexos *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Número de Folios *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="heard">Medio Recepción *</label>
@@ -777,8 +761,7 @@ function mostrarResultados() {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Días de Término *</label>
-                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12  col-2 m">
                                         <label for="heard">Tipo Documental *</label>
@@ -867,8 +850,7 @@ function mostrarResultados() {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                                value="Asignar radicado">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Asignar radicado">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                         </div>
                     </div>
@@ -883,8 +865,7 @@ function mostrarResultados() {
                     <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
                         Ingresar Remitente
                     </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">×</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -898,25 +879,20 @@ function mostrarResultados() {
                                     <p>
                                     <div class="col-md-12 col-2 m">
                                         <label for="prinombre">Nombres *</label>
-                                        <input type="text" name="nombre" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="nombre" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
 
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Fecha de Ingreso *</label>
-                                        <input type="date" name="fecha" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="date" name="fecha" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Cargo *</label>
-                                        <input type="text" name="cargo" class="form-control"
-                                            value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder=""
-                                            required>
+                                        <input type="text" name="cargo" class="form-control" value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Cedula*</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="heard">Genero*</label>
@@ -931,64 +907,52 @@ function mostrarResultados() {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Nombres *</label>
-                                        <input type="text" name="nombre" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="nombre" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Apellidos *</label>
-                                        <input type="text" name="apellidos" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="apellidos" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-12 col-sm-10 m">
                                         <label for="prinombre">Correo Electronico</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Teléfono *</label>
-                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Celular *</label>
-                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">WhatsApp *</label>
-                                        <input type="text" name="whats" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="whats" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Dirección *</label>
-                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Barrio *</label>
-                                        <input type="text" name="barrio" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="barrio" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Localidad *</label>
-                                        <input type="text" name="locali" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="locali" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Comuna *</label>
-                                        <input type="text" name="comuna" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="comuna" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Corregimiento *</label>
-                                        <input type="text" name="corregimien" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="corregimien" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
 
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="heard">Departamento *</label>
-                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()"
-                                            required>
+                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()" required>
                                             <option value="">Seleccione</option>
                                             <option value="Amazonas">Amazonas</option>
                                             <option value="Antioquia">Antioquia</option>
@@ -1036,8 +1000,7 @@ function mostrarResultados() {
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                                value="Guardar">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Guardar">
                         </div>
                     </div>
                 </div>
