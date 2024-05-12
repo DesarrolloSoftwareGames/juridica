@@ -17,7 +17,6 @@ if ($galleta != NULL  && $_SESSION['id']) {
     $foto=$row[12];
 } //si entro
 
-
 else {
     header("Location: error.php");
     exit();
