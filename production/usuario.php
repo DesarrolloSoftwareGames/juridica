@@ -206,8 +206,8 @@ body {
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Fecha de Nacimiento *</label>
-                                        <input type="date" name="fecha" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" required>
+                                        <input type="date" name="fecha" class="form-control" aria-describedby="textHelp"
+                                            placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Ubicación</label>
@@ -447,8 +447,8 @@ body {
                                         <div class="col-md-6  col-2 m">
                                             <label for="prinombre">Apellidos/Sigla *</label>
                                             <input type="text" name="cargo" class="form-control"
-                                                value="Coordinador de Puesto" aria-describedby="textHelp"
-                                                placeholder="" required>
+                                                value="Coordinador de Puesto" aria-describedby="textHelp" placeholder=""
+                                                required>
                                         </div>
                                         <div class="col-md-6 col-sm-10 m">
                                             <label for="prinombre">Dirección *</label>
@@ -897,8 +897,8 @@ body {
                                         <div class="col-md-6  col-10 m">
                                             <label for="prinombre">Cargo *</label>
                                             <input type="text" name="cargo" class="form-control"
-                                                value="Coordinador de Puesto" aria-describedby="textHelp"
-                                                placeholder="" required>
+                                                value="Coordinador de Puesto" aria-describedby="textHelp" placeholder=""
+                                                required>
                                         </div>
                                         <div class="col-md-6  col-2 m">
                                             <label for="prinombre">Cedula*</label>
@@ -1051,128 +1051,139 @@ body {
                         <div class="x_panel">
                             <p>
                             <div class="x_panel">
-                            <div class="container">
-                                <div class="row">
-                                    <p>
-                                    <div class="col-md-12  col-2 m">
-                                        <label for="heard">Seleccionar Dependencia *</label>
-                                        <select name="genero" class="form-control" required>
-                                            <option value="Administrador del sistema">Administrador del sistema</option>
-                                            <option value="Administrador Tablas de retención documental">Administrador
-                                                Tablas de retención documental</option>
-                                            <option value="Administrador del sistema">Administrador del sistema</option>
-                                            <option value="Funcionario">Funcionario</option>
-                                            <option value="Jefe">Jefe</option>
-                                            <option value="Ventanilla de radicación">Ventanilla de radicación</option>
-                                            <option value="Funcionario 2">Funcionario 2</option>
-                                            <option value="Colaborador">Colaborador</option>
-                                            <option value="Colaboradores">Colaboradores</option>
-                                            <option value="Administrador De Actas">Administrador De Actas</option>
-                                            <option value="Funcionario De Planta De Documentos">Funcionario De Planta De
-                                                Documentos</option>
-                                            <option value="Coordinador De Planta">Coordinador De Planta</option>
-                                            <option value="Coordinador De Eventos Finales">Coordinador De Eventos
-                                                Finales
-                                            </option>
-                                            <option value="Coordinador De Eventos">Coordinador De Eventos</option>
-                                            <option value="Funcionario De Eventos">Funcionario De Eventos</option>
-                                        </select>
+                                <div class="container">
+                                    <div class="row">
+                                        <p>
+                                        <div class="col-md-12  col-2 m">
+                                            <label for="heard">Seleccionar Dependencia *</label>
+                                            <select name="genero" class="form-control" required>
+                                                <option value="Administrador del sistema">Administrador del sistema
+                                                </option>
+                                                <option value="Administrador Tablas de retención documental">
+                                                    Administrador
+                                                    Tablas de retención documental</option>
+                                                <option value="Administrador del sistema">Administrador del sistema
+                                                </option>
+                                                <option value="Funcionario">Funcionario</option>
+                                                <option value="Jefe">Jefe</option>
+                                                <option value="Ventanilla de radicación">Ventanilla de radicación
+                                                </option>
+                                                <option value="Funcionario 2">Funcionario 2</option>
+                                                <option value="Colaborador">Colaborador</option>
+                                                <option value="Colaboradores">Colaboradores</option>
+                                                <option value="Administrador De Actas">Administrador De Actas</option>
+                                                <option value="Funcionario De Planta De Documentos">Funcionario De
+                                                    Planta De
+                                                    Documentos</option>
+                                                <option value="Coordinador De Planta">Coordinador De Planta</option>
+                                                <option value="Coordinador De Eventos Finales">Coordinador De Eventos
+                                                    Finales
+                                                </option>
+                                                <option value="Coordinador De Eventos">Coordinador De Eventos</option>
+                                                <option value="Funcionario De Eventos">Funcionario De Eventos</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6  col-2 m">
+                                            <label for="heard">Perfil *</label>
+                                            <select name="genero" class="form-control" required>
+                                                <option value="Jefe">Jefe</option>
+                                                <option value="Normal">Normal</option>
+                                                <option value="Jefe">Jefe</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6  col-2 m">
+                                            <label for="heard">Dependencia Principal *</label>
+                                            <select name="genero" class="form-control" required>
+                                                <option value="Sistemas">Sistemas</option>
+                                                <option value="Canal De Recepción">Canal De Recepción</option>
+                                                <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                                <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                                <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                                    SecretariaDesarrollo Económico Y Competitividad</option>
+                                                <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria
+                                                    DeHacienda
+                                                    Y Finanzas Públicas</option>
+                                                <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y
+                                                </option>
+                                                <option value="Desarrollo Social">Desarrollo Social</option>
+                                                <option value="Secretaria De Planeación">Secretaria De Planeación
+                                                </option>
+                                                <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                                <option value="Territorial Y Control Urbano">Territorial Y Control
+                                                    Urbano
+                                                </option>
+                                                <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina
+                                                    DeSeguridad
+                                                    Y Convivencia Ciudadana</option>
+                                                <option value="Secretaria De Salud Y Seguridad Social">Secretaria De
+                                                    Salud Y
+                                                    Seguridad Social</option>
+                                                <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                                <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo
+                                                    YCultura
+                                                </option>
+                                                <option value="Sisben"> Sisben </option>
+                                                <option value="Oficina De Transito Y Movilidad">Oficina De Transito Y
+                                                    Movilidad
+                                                </option>
+                                                <option value="Sistemas">Sistemas</option>
+                                                <option value="Secretaria General">Secretaria General</option>
+                                                <option value="Gestión Documental">Gestión Documental</option>
+                                                <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                                <option value="Oficina De Talento Humano">Oficina De Talento Humano
+                                                </option>
+                                                <option value="Programas Sociales Y Especiales">Programas Sociales Y
+                                                    Especiales
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 col-2 m">
+                                            <label for="prinombre">Número cédula *</label>
+                                            <input type="text" name="identificacion" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="1042443778" required>
+                                        </div>
+                                        <div class="col-md-6 col-10 m">
+                                            <label for="prinombre">Usuario *</label>
+                                            <input type="text" name="identificacion" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="Carlos Perez"
+                                                required>
+                                        </div>
+                                        <div class="col-md-12 col-sm-10 m">
+                                            <label for="prinombre">E-mail</label>
+                                            <input type="text" name="correo" class="form-control"
+                                                aria-describedby="textHelp" value="carlosAndresPerezCorcho@gmail.com"
+                                                placeholder="">
+                                        </div>
+                                        <div class="col-md-6  col-2 m">
+                                            <label for="prinombre">Fecha de Nacimiento *</label>
+                                            <input name="fecha" class="form-control" aria-describedby="textHelp"
+                                                placeholder="" value="12/6/1970" required>
+                                        </div>
+                                        <div class="col-md-6 col-sm-10 m">
+                                            <label for="prinombre">Ubicación</label>
+                                            <input type="text" name="correo" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="Riohacha">
+                                        </div>
+                                        <div class="col-md-6 col-sm-10 m">
+                                            <label for="prinombre">Piso</label>
+                                            <input type="text" name="correo" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="2">
+                                        </div>
+                                        <div class="col-md-6 col-sm-10 m">
+                                            <label for="prinombre">Extención</label>
+                                            <input type="text" name="correo" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="236">
+                                        </div>
+                                        </p>
                                     </div>
-                                    <div class="col-md-6  col-2 m">
-                                        <label for="heard">Perfil *</label>
-                                        <select name="genero" class="form-control" required>
-                                            <option value="Jefe">Jefe</option>
-                                            <option value="Normal">Normal</option>
-                                            <option value="Jefe">Jefe</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6  col-2 m">
-                                        <label for="heard">Dependencia Principal *</label>
-                                        <select name="genero" class="form-control" required>
-                                            <option value="Sistemas">Sistemas</option>
-                                            <option value="Canal De Recepción">Canal De Recepción</option>
-                                            <option value="Despacho Alcalde">Despacho Alcalde</option>
-                                            <option value="Oficina Jurídica">Oficina Jurídica</option>
-                                            <option value="Secretaria Desarrollo Económico Y Competitividad">
-                                                SecretariaDesarrollo Económico Y Competitividad</option>
-                                            <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria
-                                                DeHacienda
-                                                Y Finanzas Públicas</option>
-                                            <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
-                                            <option value="Desarrollo Social">Desarrollo Social</option>
-                                            <option value="Secretaria De Planeación">Secretaria De Planeación</option>
-                                            <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
-                                            <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
-                                            </option>
-                                            <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina
-                                                DeSeguridad
-                                                Y Convivencia Ciudadana</option>
-                                            <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud Y
-                                                Seguridad Social</option>
-                                            <option value="Secretaria De Educación">Secretaria De Educación</option>
-                                            <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo
-                                                YCultura
-                                            </option>
-                                            <option value="Sisben"> Sisben </option>
-                                            <option value="Oficina De Transito Y Movilidad">Oficina De Transito Y
-                                                Movilidad
-                                            </option>
-                                            <option value="Sistemas">Sistemas</option>
-                                            <option value="Secretaria General">Secretaria General</option>
-                                            <option value="Gestión Documental">Gestión Documental</option>
-                                            <option value="Comisaria De Familia">Comisaria De Familia</option>
-                                            <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
-                                            <option value="Programas Sociales Y Especiales">Programas Sociales Y
-                                                Especiales
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 col-2 m">
-                                        <label for="prinombre">Número cédula *</label>
-                                        <input type="text" name="identificacion" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="1042443778" required>
-                                    </div>
-                                    <div class="col-md-6 col-10 m">
-                                        <label for="prinombre">Usuario *</label>
-                                        <input type="text" name="identificacion" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="Carlos Perez" required>
-                                    </div>
-                                    <div class="col-md-12 col-sm-10 m">
-                                        <label for="prinombre">E-mail</label>
-                                        <input type="text" name="correo" class="form-control"
-                                            aria-describedby="textHelp" value="carlosAndresPerezCorcho@gmail.com" placeholder="">
-                                    </div>
-                                    <div class="col-md-6  col-2 m">
-                                        <label for="prinombre">Fecha de Nacimiento *</label>
-                                        <input name="fecha" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="12/6/1970" required>
-                                    </div>
-                                    <div class="col-md-6 col-sm-10 m">
-                                        <label for="prinombre">Ubicación</label>
-                                        <input type="text" name="correo" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="Riohacha">
-                                    </div>
-                                    <div class="col-md-6 col-sm-10 m">
-                                        <label for="prinombre">Piso</label>
-                                        <input type="text" name="correo" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="2">
-                                    </div>
-                                    <div class="col-md-6 col-sm-10 m">
-                                        <label for="prinombre">Extención</label>
-                                        <input type="text" name="correo" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="236">
-                                    </div>
-                                    </p>
+                                    <br>
+                                    <br>
                                 </div>
-                                <br>
-                                <br>
                             </div>
-                        </div>
                             </p>
                             <div class="modal-footer">
-                            <button type="button" class="btn btn-primary boton" data-toggle="modal" data-target=".bs-example-modal-permisos">Consultar</button>
-
-                                <input type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-consultar-usuario" value="Continuar">
+                                <input type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+                                    data-target=".bs-example-modal-permisos" value="Continuar">
                                 <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                             </div>
                         </div>
@@ -1214,8 +1225,8 @@ body {
                                         <div class="col-md-6  col-10 m">
                                             <label for="prinombre">Cargo *</label>
                                             <input type="text" name="cargo" class="form-control"
-                                                value="Coordinador de Puesto" aria-describedby="textHelp"
-                                                placeholder="" required>
+                                                value="Coordinador de Puesto" aria-describedby="textHelp" placeholder=""
+                                                required>
                                         </div>
                                         <div class="col-md-6  col-2 m">
                                             <label for="prinombre">Cedula*</label>
@@ -1368,133 +1379,139 @@ body {
                         <div class="x_panel">
                             <p>
                             <div class="x_panel">
-                            <div class="container">
-                                <div class="row">
-                                    <p>
-                                    <div class="col-md-12  col-2 m">
-                                        <label for="heard">Seleccionar Dependencia *</label>
-                                        <select name="genero" class="form-control" required>
-                                            <option value="Administrador del sistema">Administrador del sistema</option>
-                                            <option value="Administrador Tablas de retención documental">Administrador
-                                                Tablas de retención documental</option>
-                                            <option value="Administrador del sistema">Administrador del sistema</option>
-                                            <option value="Funcionario">Funcionario</option>
-                                            <option value="Jefe">Jefe</option>
-                                            <option value="Ventanilla de radicación">Ventanilla de radicación</option>
-                                            <option value="Funcionario 2">Funcionario 2</option>
-                                            <option value="Colaborador">Colaborador</option>
-                                            <option value="Colaboradores">Colaboradores</option>
-                                            <option value="Administrador De Actas">Administrador De Actas</option>
-                                            <option value="Funcionario De Planta De Documentos">Funcionario De Planta De
-                                                Documentos</option>
-                                            <option value="Coordinador De Planta">Coordinador De Planta</option>
-                                            <option value="Coordinador De Eventos Finales">Coordinador De Eventos
-                                                Finales
-                                            </option>
-                                            <option value="Coordinador De Eventos">Coordinador De Eventos</option>
-                                            <option value="Funcionario De Eventos">Funcionario De Eventos</option>
-                                        </select>
+                                <div class="container">
+                                    <div class="row">
+                                        <p>
+                                        <div class="col-md-12  col-2 m">
+                                            <label for="heard">Seleccionar Dependencia *</label>
+                                            <select name="genero" class="form-control" required>
+                                                <option value="Administrador del sistema">Administrador del sistema
+                                                </option>
+                                                <option value="Administrador Tablas de retención documental">
+                                                    Administrador
+                                                    Tablas de retención documental</option>
+                                                <option value="Administrador del sistema">Administrador del sistema
+                                                </option>
+                                                <option value="Funcionario">Funcionario</option>
+                                                <option value="Jefe">Jefe</option>
+                                                <option value="Ventanilla de radicación">Ventanilla de radicación
+                                                </option>
+                                                <option value="Funcionario 2">Funcionario 2</option>
+                                                <option value="Colaborador">Colaborador</option>
+                                                <option value="Colaboradores">Colaboradores</option>
+                                                <option value="Administrador De Actas">Administrador De Actas</option>
+                                                <option value="Funcionario De Planta De Documentos">Funcionario De
+                                                    Planta De
+                                                    Documentos</option>
+                                                <option value="Coordinador De Planta">Coordinador De Planta</option>
+                                                <option value="Coordinador De Eventos Finales">Coordinador De Eventos
+                                                    Finales
+                                                </option>
+                                                <option value="Coordinador De Eventos">Coordinador De Eventos</option>
+                                                <option value="Funcionario De Eventos">Funcionario De Eventos</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6  col-2 m">
+                                            <label for="heard">Perfil *</label>
+                                            <select name="genero" class="form-control" required>
+                                                <option value="Jefe">Jefe</option>
+                                                <option value="Normal">Normal</option>
+                                                <option value="Jefe">Jefe</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6  col-2 m">
+                                            <label for="heard">Dependencia Principal *</label>
+                                            <select name="genero" class="form-control" required>
+                                                <option value="Sistemas">Sistemas</option>
+                                                <option value="Canal De Recepción">Canal De Recepción</option>
+                                                <option value="Despacho Alcalde">Despacho Alcalde</option>
+                                                <option value="Oficina Jurídica">Oficina Jurídica</option>
+                                                <option value="Secretaria Desarrollo Económico Y Competitividad">
+                                                    SecretariaDesarrollo Económico Y Competitividad</option>
+                                                <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria
+                                                    DeHacienda
+                                                    Y Finanzas Públicas</option>
+                                                <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y
+                                                </option>
+                                                <option value="Desarrollo Social">Desarrollo Social</option>
+                                                <option value="Secretaria De Planeación">Secretaria De Planeación
+                                                </option>
+                                                <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
+                                                <option value="Territorial Y Control Urbano">Territorial Y Control
+                                                    Urbano
+                                                </option>
+                                                <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina
+                                                    DeSeguridad
+                                                    Y Convivencia Ciudadana</option>
+                                                <option value="Secretaria De Salud Y Seguridad Social">Secretaria De
+                                                    Salud Y
+                                                    Seguridad Social</option>
+                                                <option value="Secretaria De Educación">Secretaria De Educación</option>
+                                                <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo
+                                                    YCultura
+                                                </option>
+                                                <option value="Sisben"> Sisben </option>
+                                                <option value="Oficina De Transito Y Movilidad">Oficina De Transito Y
+                                                    Movilidad
+                                                </option>
+                                                <option value="Sistemas">Sistemas</option>
+                                                <option value="Secretaria General">Secretaria General</option>
+                                                <option value="Gestión Documental">Gestión Documental</option>
+                                                <option value="Comisaria De Familia">Comisaria De Familia</option>
+                                                <option value="Oficina De Talento Humano">Oficina De Talento Humano
+                                                </option>
+                                                <option value="Programas Sociales Y Especiales">Programas Sociales Y
+                                                    Especiales
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 col-2 m">
+                                            <label for="prinombre">Número cédula *</label>
+                                            <input type="text" name="identificacion" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="1042443778" required>
+                                        </div>
+                                        <div class="col-md-6 col-10 m">
+                                            <label for="prinombre">Usuario *</label>
+                                            <input type="text" name="identificacion" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="Carlos Perez"
+                                                required>
+                                        </div>
+                                        <div class="col-md-12 col-sm-10 m">
+                                            <label for="prinombre">E-mail</label>
+                                            <input type="text" name="correo" class="form-control"
+                                                aria-describedby="textHelp" value="carlosAndresPerezCorcho@gmail.com"
+                                                placeholder="">
+                                        </div>
+                                        <div class="col-md-6  col-2 m">
+                                            <label for="prinombre">Fecha de Nacimiento *</label>
+                                            <input name="fecha" class="form-control" aria-describedby="textHelp"
+                                                placeholder="" value="12/6/1970" required>
+                                        </div>
+                                        <div class="col-md-6 col-sm-10 m">
+                                            <label for="prinombre">Ubicación</label>
+                                            <input type="input" name="ubicacion" class="form-control" placeholder=""
+                                                value="Riohacha">
+                                        </div>
+                                        <div class="col-md-6 col-sm-10 m">
+                                            <label for="prinombre">Piso</label>
+                                            <input type="text" name="correo" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="2">
+                                        </div>
+                                        <div class="col-md-6 col-sm-10 m">
+                                            <label for="prinombre">Extención</label>
+                                            <input type="text" name="correo" class="form-control"
+                                                aria-describedby="textHelp" placeholder="" value="236">
+                                        </div>
+                                        </p>
                                     </div>
-                                    <div class="col-md-6  col-2 m">
-                                        <label for="heard">Perfil *</label>
-                                        <select name="genero" class="form-control" required>
-                                            <option value="Jefe">Jefe</option>
-                                            <option value="Normal">Normal</option>
-                                            <option value="Jefe">Jefe</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6  col-2 m">
-                                        <label for="heard">Dependencia Principal *</label>
-                                        <select name="genero" class="form-control" required>
-                                            <option value="Sistemas">Sistemas</option>
-                                            <option value="Canal De Recepción">Canal De Recepción</option>
-                                            <option value="Despacho Alcalde">Despacho Alcalde</option>
-                                            <option value="Oficina Jurídica">Oficina Jurídica</option>
-                                            <option value="Secretaria Desarrollo Económico Y Competitividad">
-                                                SecretariaDesarrollo Económico Y Competitividad</option>
-                                            <option value="Secretaria De Hacienda Y Finanzas Públicas">Secretaria
-                                                DeHacienda
-                                                Y Finanzas Públicas</option>
-                                            <option value="Secretaria De Gobierno Y">Secretaria De Gobierno Y</option>
-                                            <option value="Desarrollo Social">Desarrollo Social</option>
-                                            <option value="Secretaria De Planeación">Secretaria De Planeación</option>
-                                            <option value="Oficina De Ordenamiento">Oficina De Ordenamiento</option>
-                                            <option value="Territorial Y Control Urbano">Territorial Y Control Urbano
-                                            </option>
-                                            <option value="Oficina De Seguridad Y Convivencia Ciudadana">Oficina
-                                                DeSeguridad
-                                                Y Convivencia Ciudadana</option>
-                                            <option value="Secretaria De Salud Y Seguridad Social">Secretaria De Salud Y
-                                                Seguridad Social</option>
-                                            <option value="Secretaria De Educación">Secretaria De Educación</option>
-                                            <option value="Secretaria De Turismo Y Cultura">Secretaria De Turismo
-                                                YCultura
-                                            </option>
-                                            <option value="Sisben"> Sisben </option>
-                                            <option value="Oficina De Transito Y Movilidad">Oficina De Transito Y
-                                                Movilidad
-                                            </option>
-                                            <option value="Sistemas">Sistemas</option>
-                                            <option value="Secretaria General">Secretaria General</option>
-                                            <option value="Gestión Documental">Gestión Documental</option>
-                                            <option value="Comisaria De Familia">Comisaria De Familia</option>
-                                            <option value="Oficina De Talento Humano">Oficina De Talento Humano</option>
-                                            <option value="Programas Sociales Y Especiales">Programas Sociales Y
-                                                Especiales
-                                            </option>
-                                        </select>
-                                    </div>
-
-
-
-
-                                    <div class="col-md-6 col-2 m">
-                                        <label for="prinombre">Número cédula *</label>
-                                        <input type="text" name="identificacion" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="1042443778" required>
-                                    </div>
-                                    <div class="col-md-6 col-10 m">
-                                        <label for="prinombre">Usuario *</label>
-                                        <input type="text" name="identificacion" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="Carlos Perez" required>
-                                    </div>
-                                    <div class="col-md-12 col-sm-10 m">
-                                        <label for="prinombre">E-mail</label>
-                                        <input type="text" name="correo" class="form-control"
-                                            aria-describedby="textHelp" value="carlosAndresPerezCorcho@gmail.com" placeholder="">
-                                    </div>
-                                    <div class="col-md-6  col-2 m">
-                                        <label for="prinombre">Fecha de Nacimiento *</label>
-                                        <input name="fecha" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="12/6/1970" required>
-                                    </div>
-                                    <div class="col-md-6 col-sm-10 m">
-                                        <label for="prinombre">Ubicación</label>
-                                        <input type="input" name="ubicacion" class="form-control" placeholder="" value="Riohacha">
-                                    </div>
-                                    <div class="col-md-6 col-sm-10 m">
-                                        <label for="prinombre">Piso</label>
-                                        <input type="text" name="correo" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="2">
-                                    </div>
-                                    <div class="col-md-6 col-sm-10 m">
-                                        <label for="prinombre">Extención</label>
-                                        <input type="text" name="correo" class="form-control"
-                                            aria-describedby="textHelp" placeholder="" value="236">
-                                    </div>
-                                    </p>
+                                    <br>
+                                    <br>
                                 </div>
-                                <br>
-                                <br>
                             </div>
-                        </div>
                             </p>
                             <div class="modal-footer">
-                            <button type="button" class="btn btn-primary boton" data-toggle="modal"
-                            data-target=".bs-example-modal-permisos">Consultar</button>
-
-
-
+                                <button type="button" class="btn btn-primary boton" href="consultar_permisos - copia.php">Consultar</button>
+                                    
                                 <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
                                     value="Continuar">
                                 <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
@@ -1504,8 +1521,8 @@ body {
                 </div>
             </div>
         </div>
-        <div class="modal fade bs-example-modal-permisos" tabindex=" -1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
+        <div class="modal fade bs-example-modal-permisos" tabindex=" -1" role="dialog" aria-hidden="true" style="width:100%;">
+            <div class="modal-dialog modal-lg" style="width:1500%;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
@@ -1516,23 +1533,248 @@ body {
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="x_panelm">
+
                             <p>
                             <p><b class="moda" style="font-size: 24px;">Datos Remitente</b></p>
+                            <form>
+                                <div class="x_panel" style="width:100%; margin-top: 20px; margin-bottom:20px;">
+                                    <div class="col-lg-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-bordered" cellspacing="0"
+                                                width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Permisos de Usuarios</th>
+                                                        <th>Permisos de Accesos</th>
+                                                        <th>Permisos de Módulos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Activar
+                                                                        usuario</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Solicitar cambio
+                                                                        contraseña</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Usuario
+                                                                        público</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Radicación
+                                                                        Masiva</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Puede
+                                                                        reasignar radicado</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Acceso a
+                                                                        consultas</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Ingresar
+                                                                        por directorio activo</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Puede
+                                                                        modificar anexos</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Puede
+                                                                        borrar anexos</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Firma
+                                                                        QR</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Consultar radicados
+                                                                        confidenciales</span></label>
+                                                            </div>
 
-                            <div class="x_panelm2">
-                                <div class="container">
-                                    <div class="row">
-
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Digitalización de
+                                                                        documentos</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Modificación de
+                                                                        radicado</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Devolución de
+                                                                        correspondencia</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Impresión</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Estadísticas</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Agregar
+                                                                        Destinatarios/Remitentes</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Pre-radicación</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Radicación
+                                                                        e-mail</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Administrador del
+                                                                        sistema</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Descarga
+                                                                        de archivos originales</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Publicar
+                                                                        documentos</span></label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Administrador de
+                                                                        Archivos</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Tablas
+                                                                        de Retención Documental</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Anulación de
+                                                                        Radicado</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Puede
+                                                                        Archivar Documentos</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Solicitar anulación de
+                                                                        radicado</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Préstamo
+                                                                        de Documentos</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Expedientes
+                                                                        virtuales</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Envió de
+                                                                        Correspondencia</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Descargar
+                                                                        Documentos</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Transferencias
+                                                                        documentales</span></label>
+                                                            </div>
+                                                            <div class="col-md-12 sep sepa">
+                                                                <label class="ckbox"><input
+                                                                        type="checkbox" /><span>Reasignación
+                                                                        Masiva</span></label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <div class="col-lg-12">
+                                                    <div class="table-responsive">
+                                                        <table id="example" class="table table-striped table-bordered"
+                                                            cellspacing="0" width="100%">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th colspan="3" style="text-align: center;">Tipos de
+                                                                        Radicados</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="col-md-12 sep sepa">
+                                                                            <label class="ckbox"><input
+                                                                                    type="checkbox" /><span>Entrada</span></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="col-md-12 sep sepa">
+                                                                            <label class="ckbox"><input
+                                                                                    type="checkbox" /><span>Salida</span></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="col-md-12 sep sepa">
+                                                                            <label class="ckbox"><input
+                                                                                    type="checkbox" /><span>PQRSD</span></label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </table>
+                                            <div class="modal-footer">
+                                                <input type="reset" class="btn btn-primary"
+                                                    name="guardar_coordinadores_puesto" value="Guardar"
+                                                    onclick="alert('Permisos Guardados Correctamente');">
+                                                <input type="submit" class="btn btn-primary"
+                                                    name="guardar_coordinadores_puesto" value="Cancelar">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                             <div class="modal-footer">
                                 <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                                 <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
                                     value="Guardar">
                             </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
