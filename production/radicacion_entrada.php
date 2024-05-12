@@ -9,12 +9,12 @@ $codigousuario = $aux[0];
 
 ///si estoy dentro////
 if ($galleta != NULL  && $_SESSION['id']) {
-    $usuario=$_SESSION['LOGIN'];
-    $tipousuario=$_SESSION['TIPOUSUARIO'];
-    $query = mysqli_query($conn, "select * from registro where NomUsuario='$usuario' "); 
+    $usuario = $_SESSION['LOGIN'];
+    $tipousuario = $_SESSION['TIPOUSUARIO'];
+    $query = mysqli_query($conn, "select * from registro where NomUsuario='$usuario' ");
     $row = mysqli_fetch_row($query);
-    $nombredeusuario=$row[2]." ".$row[4];
-    $foto=$row[12];
+    $nombredeusuario = $row[2] . " " . $row[4];
+    $foto = $row[12];
 } //si entro
 
 else {
@@ -28,37 +28,37 @@ else {
 <?php include('includes/navigation.php'); ?>
 
 <style>
-header {
-    background: #8E2DE2;
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
-}
+    header {
+        background: #8E2DE2;
+        background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+        background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    }
 
-/*estilos para la tabla  background-color: #337ab7 !important;*/
-table th {
+    /*estilos para la tabla  background-color: #337ab7 !important;*/
+    table th {
 
-    color: white;
-}
+        color: white;
+    }
 
-table>tbody>tr>td {
-    vertical-align: middle !important;
-}
+    table>tbody>tr>td {
+        vertical-align: middle !important;
+    }
 
-/*para alinear los botones y cuadro de busqueda*/
-.btn-group,
-.btn-group-vertical {
-    /*position: absolute !important;*/
-    margin-top: 100px;
-}
+    /*para alinear los botones y cuadro de busqueda*/
+    .btn-group,
+    .btn-group-vertical {
+        /*position: absolute !important;*/
+        margin-top: 100px;
+    }
 
-.tam {
-    width: 100px;
-    height: 100px;
-}
+    .tam {
+        width: 100px;
+        height: 100px;
+    }
 
-.pos {
-    margin: 200px 10px 50px 10px;
-}
+    .pos {
+        margin: 200px 10px 50px 10px;
+    }
 </style>
 <!-- xxxxxxxxxxxxxxxxx para los botones de la tabla exportar, pdf, imprimir xxxxxxxxxxxxxxxxxxxxxxx -->
 <!--datables CSS básico-->
@@ -67,14 +67,12 @@ table>tbody>tr>td {
 <link rel="stylesheet" type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
 
 <!--font awesome con CDN-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 <!-- xxxxxxxxxxxxxxxxxx  para los botones de la tabla exportar, pdf, imprimir xxxxxxxxxxxxxxxxxxxxxxx -->
 
 
-<button type="button" class="btn btn-primary boton" data-toggle="modal" data-target=".bs-example-modal-ingresar-elector"
-    data-dismiss="hide">Ingresar Radicación</button>
+<button type="button" class="btn btn-primary boton" data-toggle="modal" data-target=".bs-example-modal-ingresar-elector" data-dismiss="hide">Ingresar Radicación</button>
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -100,8 +98,7 @@ table>tbody>tr>td {
                             <td>Colaseo</td>
                             <td></td>
                             <td>Certificación de Supervisión</td>
-                            <td style="text-align: center; font-size: x-large;"><i class="icon ion-md-alarm"
-                                    style="color:rgb(246, 161, 3);">15/D</i> </td>
+                            <td style="text-align: center; font-size: x-large;"><i class="icon ion-md-alarm" style="color:rgb(246, 161, 3);">15/D</i> </td>
                             <td></td>
                         </tr>
                         <tr>
@@ -111,8 +108,7 @@ table>tbody>tr>td {
                             <td>Juridica</td>
                             <td></td>
                             <td>Solicitud</td>
-                            <td style="text-align: center; font-size: x-large;"><i class="icon ion-md-alarm"
-                                    style="color:rgb(56, 246, 3);">30/D</i> </td>
+                            <td style="text-align: center; font-size: x-large;"><i class="icon ion-md-alarm" style="color:rgb(56, 246, 3);">30/D</i> </td>
                             <td></td>
                         </tr>
                         <tr>
@@ -122,8 +118,7 @@ table>tbody>tr>td {
                             <td>Sec Salud</td>
                             <td></td>
                             <td>Petición</td>
-                            <td style="text-align: center; font-size: x-large;"><i class="icon ion-md-alarm"
-                                    style="color:rgb(246, 3, 3);">02/D</i> </td>
+                            <td style="text-align: center; font-size: x-large;"><i class="icon ion-md-alarm" style="color:rgb(246, 3, 3);">02/D</i> </td>
                             <td></td>
                         </tr>
 
@@ -134,10 +129,8 @@ table>tbody>tr>td {
     </div>
 </div>
 
-</div>
 <!--  modal ingresar radicacion -->
-<form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST"
-    class="row gy-2 gx-3 align-items-center">
+<form action="guardar_coordinadores_puesto.php<?php echo '?galletaAUX=' . $galleta; ?>" method="POST" class="row gy-2 gx-3 align-items-center">
     <div class="modal fade bs-example-modal-ingresar-elector" tabindex=" -1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -145,8 +138,7 @@ table>tbody>tr>td {
                     <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
                         Entrada de Radicación
                     </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">×</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -155,8 +147,7 @@ table>tbody>tr>td {
                         <p><b class="moda" style="font-size: 24px;">Datos Remitente</b></p>
                         <!-- boton primer modal -->
                         <div style="margin-left: 75%;">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal"
-                                data-target=".bs-example-modal-ingresar-remitente">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-remitente">
                                 Ingresar Remitente</button>
                         </div>
                         <div class="x_panelm2">
@@ -165,13 +156,11 @@ table>tbody>tr>td {
                                     <p>
                                     <div class="col-md-12  col-2 m">
                                         <label for="prinombre">Fecha de Ingreso *</label>
-                                        <input type="date" name="fecha" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="date" name="fecha" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-10 m">
                                         <label for="prinombre">Número Identificación *</label>
-                                        <input type="text" name="identificacion" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="heard">Tipo *</label>
@@ -185,34 +174,27 @@ table>tbody>tr>td {
 
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Nombres/Razón Social *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Apellidos/Sigla *</label>
-                                        <input type="text" name="cargo" class="form-control"
-                                            value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder=""
-                                            required>
+                                        <input type="text" name="cargo" class="form-control" value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Dirección *</label>
-                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-2 m">
                                         <label for="prinombre">Teléfono *</label>
-                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12 col-sm-10 m">
                                         <label for="prinombre">E-mail</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12 col-sm-2 m">
                                         <label for="prinombre">Dignatario/ Funcionario</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="heard">Continente *</label>
@@ -432,8 +414,7 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="heard">Departamento *</label>
-                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()"
-                                            required>
+                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()" required>
                                             <option value="">Seleccione</option>
                                             <option value="Amazonas">Amazonas</option>
                                             <option value="Antioquia">Antioquia</option>
@@ -480,13 +461,11 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Descripción Anexos *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Número de Folios *</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="heard">Medio Recepción *</label>
@@ -501,8 +480,7 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Días de Término *</label>
-                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-12  col-2 m">
                                         <label for="heard">Tipo Documental *</label>
@@ -591,8 +569,7 @@ table>tbody>tr>td {
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                                value="Asignar radicado">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Asignar radicado">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
                         </div>
                     </div>
@@ -607,8 +584,7 @@ table>tbody>tr>td {
                     <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
                         Ingresar Remitente
                     </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">×</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -622,25 +598,20 @@ table>tbody>tr>td {
                                     <p>
                                     <div class="col-md-12 col-2 m">
                                         <label for="prinombre">Nombres *</label>
-                                        <input type="text" name="nombre" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="nombre" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
 
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Fecha de Ingreso *</label>
-                                        <input type="date" name="fecha" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="date" name="fecha" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="prinombre">Cargo *</label>
-                                        <input type="text" name="cargo" class="form-control"
-                                            value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder=""
-                                            required>
+                                        <input type="text" name="cargo" class="form-control" value="Coordinador de Puesto" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-2 m">
                                         <label for="prinombre">Cedula*</label>
-                                        <input type="text" name="numeroident" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="numeroident" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6  col-10 m">
                                         <label for="heard">Genero*</label>
@@ -655,64 +626,52 @@ table>tbody>tr>td {
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Nombres *</label>
-                                        <input type="text" name="nombre" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="nombre" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Apellidos *</label>
-                                        <input type="text" name="apellidos" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="" required>
+                                        <input type="text" name="apellidos" class="form-control" aria-describedby="emailHelp" placeholder="" required>
                                     </div>
                                     <div class="col-md-12 col-sm-10 m">
                                         <label for="prinombre">Correo Electronico</label>
-                                        <input type="email" name="correo" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Teléfono *</label>
-                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="tel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Celular *</label>
-                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="cel" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">WhatsApp *</label>
-                                        <input type="text" name="whats" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="whats" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Dirección *</label>
-                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp"
-                                            placeholder="">
+                                        <input type="text" name="dir" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="prinombre">Barrio *</label>
-                                        <input type="text" name="barrio" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="barrio" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Localidad *</label>
-                                        <input type="text" name="locali" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="locali" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Comuna *</label>
-                                        <input type="text" name="comuna" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="comuna" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
                                     <div class="col-md-4 col-sm-10 m">
                                         <label for="prinombre">Corregimiento *</label>
-                                        <input type="text" name="corregimien" class="form-control"
-                                            aria-describedby="emailHelp" placeholder="">
+                                        <input type="text" name="corregimien" class="form-control" aria-describedby="emailHelp" placeholder="">
                                     </div>
 
                                     <div class="col-md-6 col-sm-10 m">
                                         <label for="heard">Departamento *</label>
-                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()"
-                                            required>
+                                        <select name="dpto" id="dpto" class="form-control" onChange="cargarmunicipio()" required>
                                             <option value="">Seleccione</option>
                                             <option value="Amazonas">Amazonas</option>
                                             <option value="Antioquia">Antioquia</option>
@@ -760,8 +719,7 @@ table>tbody>tr>td {
                         </div>
                         <div class="modal-footer">
                             <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
-                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto"
-                                value="Guardar">
+                            <input type="submit" class="btn btn-primary" name="guardar_coordinadores_puesto" value="Guardar">
                         </div>
                     </div>
                 </div>
