@@ -76,11 +76,338 @@ table>tbody>tr>td {
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
 <div class="container" style="margin: 100px 0px 100px 420px ">
 
-    <div class="row">
-        
+<!-- Inicio modulo de Consultas generales-->
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="btn btn-primary m-1" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Búsqueda Clásica</a>
+    <a class="btn btn-info m-1" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Buscar Expedientes</a>
+  </div>
+</nav>
+<div class="tab-content mt-5" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
+  <h1>Búsqueda Clásica</h1>   
+<div class="container mt-2">
+        <form action="#">
+            <div class="form-group row">
+                <label for="radicado" class="col-sm-2 col-form-label">Radicado:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="radicado" name="radicado">
+                </div>
+            </div>
 
+            <div class="form-group row">
+                <label for="identificacion" class="col-sm-2 col-form-label">Identificación (T.I.C.C,Nit):</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="identificacion" name="identificacion">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="expediente" class="col-sm-2 col-form-label">Expediente:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="expediente" name="expediente">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="filtrar_por" class="col-sm-2 col-form-label">Filtrar por:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="filtrar_por" name="filtrar_por">
+                        <option value="">Todos</option>
+                        <option value="radicado">Radicado</option>
+                        <option value="identificacion">Identificación</option>
+                        <option value="expediente">Expediente</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="ver_en_listado" name="ver_en_listado">
+                        <label class="form-check-label" for="ver_en_listado">Ver en Listado</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="buscar_ciudadanos" name="buscar_ciudadanos">
+                        <label class="form-check-label" for="buscar_ciudadanos">Buscar Ciudadanos</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="buscar_en_terceros" name="buscar_en_terceros">
+                        <label class="form-check-label" for="buscar_en_terceros">Buscar en Terceros</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="buscar_en_empresas" name="buscar_en_empresas">
+                        <label class="form-check-label" for="buscar_en_empresas">Buscar en Empresas</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="checkbox" class="form-check-input" id="buscar_funcionarios" name="buscar_funcionarios">
+                        <label class="form-check-label" for="buscar_funcionarios">Buscar Funcionarios</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+            <label for="buscar_por_radicados" class="col-sm-2 col-form-label">Buscar en Radicados:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="buscar_por_radicados" name="buscar_por_radicados">
+                        <option value="">Todos los Tipos (-1,-2,-3,-5,...)</option>
+                        <option value="tipo1">Entrada</option>
+                        <option value="tipo2">Pqrsd</option>
+                        <option value="tipo3">Salida</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group row">
+                <label for="fecha_desde" class="col-sm-2 col-form-label">Fecha desde:</label>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control" id="fecha_desde" name="fecha_desde">
+                </div>
+                <label for="fecha_hasta" class="col-sm-2 col-form-label">Fecha hasta:</label>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control" id="fecha_hasta" name="fecha_hasta">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="tipo_documento" class="col-sm-2 col-form-label">Tipo de documento:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="tipo_documento" name="tipo_documento">
+                        <option value="">Seleccione un tipo de documento</option>
+                        <option value="comunicacion_oficial">Comunicación oficial</option>
+                        <option value="expediente">Expediente</option>
+                        <option value="acta_anulacion_radicado">Acta de anulación de radicado</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="dependencia" class="col-sm-2 col-form-label">Dependencia:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="dependencia" name="dependencia">
+                        <option value="">Seleccione una dependencia</option>
+                        <option value="CANAL DE RECEPCIÓN">CANAL DE RECEPCIÓN</option>
+                        <option value="DESPACHO ALCALDE">DESPACHO ALCALDE</option>
+                        <option value="OFICINA JURIDICA">OFICINA JURIDICA</option>
+                        <option value="SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD">SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD</option>
+                        <option value="SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS">SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS</option>
+                        <option value="SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL">SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL</option>
+                        <option value="SECCRETARIA DE PLANEACION">SECCRETARIA DE PLANEACION</option>
+                        <option value="OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO">OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO</option>
+                        <option value="OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA">OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA</option>
+                        <option value="SECRETARIA DE SALUD Y SEGURIDAD SOCIAL">SECRETARIA DE SALUD Y SEGURIDAD SOCIAL</option>
+                        <option value="SECRETARIA DE EDUCACION">SECRETARIA DE EDUCACION</option>
+                        <option value="SECRETARIA DE TURISMO Y CULTURA">SECRETARIA DE TURISMO Y CULTURA</option>
+                        <option value="SISBEN">SISBEN</option>
+                        <option value="OFICINA DE TRANSITO Y MOVILIDAD">OFICINA DE TRANSITO Y MOVILIDAD</option>
+                        <option value="SECRETARIA GENERAL">SECRETARIA GENERAL</option>
+                        <option value="GESTION DOCUMENTAL">GESTION DOCUMENTAL</option>
+                        <option value="COMISARIA DE FAMILIA">COMISARIA DE FAMILIA</option>
+                        <option value="OFICINA DE TALENTO HUMANO">OFICINA DE TALENTO HUMANO</option>
+                        <option value="PROGRAMAS SOCIALES Y ESPECIALES">PROGRAMAS SOCIALES Y ESPECIALES</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                <button type="button" class="btn btn-primary" onclick="mostrarResultados()">Búsqueda</button>
+                <button type="button" class="btn btn-secondary"  onclick="limpiarTablaResultados()">Limpiar</button>
+                </div>
+            </div>
+        </form>
     </div>
+  </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <h1>Búsqueda de Expedientes</h1>
+    <form action="#">
+      <div class="form-group">
+        <label for="numeroExpediente">Número del Expediente</label>
+        <input type="text" class="form-control" id="numeroExpediente" placeholder="Ingrese el número del expediente">
+      </div>
+
+      <div class="form-group">
+        <label for="nombreExpediente">Nombre del Expediente</label>
+        <input type="text" class="form-control" id="nombreExpediente" placeholder="Ingrese el nombre del expediente">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="fechaRadicacionInicial">Fecha radicación inicial</label>
+          <input type="date" class="form-control" id="fechaRadicacionInicial">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="fechaRadicacionFinal">Fecha radicación final</label>
+          <input type="date" class="form-control" id="fechaRadicacionFinal">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="serie">Serie</label>
+        <select class="form-control" id="serie">
+          <option value="">Seleccione</option>
+          <option value="serie1">Serie 1</option>
+          <option value="serie2">Serie 2</option>
+          <option value="serie3">Serie 3</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="subserie">SubSerie</label>
+        <select class="form-control" id="subserie">
+          <option value="">Seleccione</option>
+          <option value="subserie1">SubSerie 1</option>
+          <option value="subserie2">SubSerie 2</option>
+          <option value="subserie3">SubSerie 3</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="dependenciaDuenia">Dependencia dueña del expediente</label>
+            <select class="form-control" id="dependenciaDuenia" name="dependencia">
+                        <option value="">Seleccione una dependencia</option>
+                        <option value="CANAL DE RECEPCIÓN">CANAL DE RECEPCIÓN</option>
+                        <option value="DESPACHO ALCALDE">DESPACHO ALCALDE</option>
+                        <option value="OFICINA JURIDICA">OFICINA JURIDICA</option>
+                        <option value="SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD">SECRETARIA DESARROLLO ECONOMICO Y COMPETITIVIDAD</option>
+                        <option value="SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS">SECRETARIA DE HACIENDA Y FINANZAS PUBLICAS</option>
+                        <option value="SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL">SECRETARIA DE GOBIERNO Y DESARROLLO SOCIAL</option>
+                        <option value="SECCRETARIA DE PLANEACION">SECCRETARIA DE PLANEACION</option>
+                        <option value="OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO">OFICINA DE ORDENAMIENTO TERRITORIAL Y CONTROL URBANO</option>
+                        <option value="OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA">OFICINA DE SEGURIDAD Y CONVIVENCIA CIUDADANA</option>
+                        <option value="SECRETARIA DE SALUD Y SEGURIDAD SOCIAL">SECRETARIA DE SALUD Y SEGURIDAD SOCIAL</option>
+                        <option value="SECRETARIA DE EDUCACION">SECRETARIA DE EDUCACION</option>
+                        <option value="SECRETARIA DE TURISMO Y CULTURA">SECRETARIA DE TURISMO Y CULTURA</option>
+                        <option value="SISBEN">SISBEN</option>
+                        <option value="OFICINA DE TRANSITO Y MOVILIDAD">OFICINA DE TRANSITO Y MOVILIDAD</option>
+                        <option value="SECRETARIA GENERAL">SECRETARIA GENERAL</option>
+                        <option value="GESTION DOCUMENTAL">GESTION DOCUMENTAL</option>
+                        <option value="COMISARIA DE FAMILIA">COMISARIA DE FAMILIA</option>
+                        <option value="OFICINA DE TALENTO HUMANO">OFICINA DE TALENTO HUMANO</option>
+                        <option value="PROGRAMAS SOCIALES Y ESPECIALES">PROGRAMAS SOCIALES Y ESPECIALES</option>
+                </select>
+        </div>
+
+      <button type="button" class="btn btn-primary" onclick="mostrarResultados()">Búsqueda</button>
+      <button type="button" class="btn btn-secondary"  onclick="limpiarTablaResultados()">Limpiar</button>
+    </form>
+    </div>
+
+    <div id="resultadosBusqueda" class="mt-3">
+        <h2>Resultados de la búsqueda</h2>
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Número Radicado</th>
+                <th>Fecha Radicación</th>
+                <th>Número Expediente</th>
+                <th>Responsable</th>
+                <th>Nombre</th>
+                <th>Asunto</th>
+                <th>Serie</th>
+                <th>Número Asociado</th>
+                <th>Tipo</th>
+                <th>Nombre Funcionario</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- codigo Js para los resultados de busqueda -->
+<script>
+function limpiarTablaResultados() {
+  const tablaResultados = document.getElementById('resultadosBusqueda').getElementsByTagName('tbody')[0];
+  tablaResultados.innerHTML = '';
+}
+
+function mostrarResultados() {
+  // Obtener los datos de la búsqueda
+  const numeroExpediente = document.getElementById('numeroExpediente').value;
+  const nombreExpediente = document.getElementById('nombreExpediente').value;
+  const fechaRadicacionInicial = document.getElementById('fechaRadicacionInicial').value;
+  const fechaRadicacionFinal = document.getElementById('fechaRadicacionFinal').value;
+  const serie = document.getElementById('serie').value;
+  const subserie = document.getElementById('subserie').value;
+  const dependenciaDuenia = document.getElementById('dependenciaDuenia').value;
+
+  // Simular la consulta a la base de datos (reemplazar con la consulta real)
+  const resultadosBusqueda = [
+    {
+      numeroRadicado: '2023-E-12345',
+      fechaRadicacion: '2023-11-14',
+      numeroExpediente: 'EXP-12345',
+      responsable: 'Juan Pérez',
+      nombre: 'Solicitud de licencia',
+      asunto: 'Permisos',
+      serie: 'Serie 1',
+      numeroRadicadoAsociado: '2023-E-67890',
+      tipo: 'Memorando',
+      nombreFuncionario: 'María Gómez'
+    },
+    {
+      numeroRadicado: '2024-E-56789',
+      fechaRadicacion: '2024-05-11',
+      numeroExpediente: 'EXP-56789',
+      responsable: 'Ana López',
+      nombre: 'Informe de actividades',
+      asunto: 'Seguimiento proyecto X',
+      serie: 'Serie 2',
+      numeroRadicadoAsociado: '2024-E-23456',
+      tipo: 'Carta',
+      nombreFuncionario: 'Carlos Ramírez'
+    },
+    // Agregar más filas de resultados según sea necesario
+  ];
+
+  // Limpiar la tabla de resultados previos
+  const tablaResultados = document.getElementById('resultadosBusqueda').getElementsByTagName('tbody')[0];
+  tablaResultados.innerHTML = '';
+
+  // Llenar la tabla con los nuevos resultados
+  for (const resultado of resultadosBusqueda) {
+    const fila = tablaResultados.insertRow();
+
+    const celdaNumeroRadicado = fila.insertCell();
+    celdaNumeroRadicado.textContent = resultado.numeroRadicado;
+
+    const celdaFechaRadicacion = fila.insertCell();
+    celdaFechaRadicacion.textContent = resultado.fechaRadicacion;
+
+    const celdaNumeroExpediente = fila.insertCell();
+    celdaNumeroExpediente.textContent = resultado.numeroExpediente;
+
+    const celdaResponsable = fila.insertCell();
+    celdaResponsable.textContent = resultado.responsable;
+
+    const celdaNombre = fila.insertCell();
+    celdaNombre.textContent = resultado.nombre;
+
+    const celdaAsunto = fila.insertCell();
+    celdaAsunto.textContent = resultado.asunto;
+
+    const celdaSerie = fila.insertCell();
+    celdaSerie.textContent = resultado.serie;
+
+    const celdaNumeroRadicadoAsociado = fila.insertCell();
+    celdaNumeroRadicadoAsociado.textContent = resultado.numeroRadicadoAsociado;
+
+    const celdaTipo = fila.insertCell();
+    celdaTipo.textContent = resultado.tipo;
+
+    const celdaNombreFuncionario = fila.insertCell();
+    celdaNombreFuncionario.textContent = resultado.nombreFuncionario;
+  }
+}
+</script>
+<!-- Fin de modulo de tablas de Consultas generales -->
 </div>
 
 </div>
