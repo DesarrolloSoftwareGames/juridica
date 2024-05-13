@@ -210,7 +210,7 @@ else {
 
                         </div>
                         <div class="col-md-2  col-2 m">
-                            <label for="medio-envio">Medio Envío *</label>
+                            <label for="medio-envio">Medio Recepción *</label>
                             <select name="medio-envio" id="medio-envio" class="form-control" required>
                                 <option value="Seleccione">Seleccione</option>
                                 <option value="Mensajería">Mensajería</option>
