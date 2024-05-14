@@ -73,7 +73,7 @@ else {
 <button type="button" class="btn btn-primary boton" data-toggle="modal"
     data-target=".bs-example-modal-ingresar-elector">Ingresar Radicación</button>-->
 <div class="container">
-    <div class="row" id="search-box">
+    <div class="row">
         <div class="x_panel">
             <p>
             <p><b class="moda" style="font-size: 24px;">Planilla radicados</b></p>
@@ -453,76 +453,76 @@ else {
             </div>
         </form>
     </div>
-    <script>
-        const getMunicipios = async () => {
-            const departamento = document.getElementById('depa').value;
-            fetch(
-                `../utils/municipios.json`
-            ).then((res) => res.json()).then((data) => {
-                const municipios = data.filter((municipio) => municipio.departamento === departamento).map((municipio) => municipio.municipio);
-                const selectMunicipio = document.getElementById('muni');
-                selectMunicipio.innerHTML = '';
-                municipios.forEach((municipio) => {
-                    const option = document.createElement('option');
-                    option.value = municipio;
-                    option.text = municipio;
-                    selectMunicipio.appendChild(option);
-                });
+</div>
+<script>
+    const getMunicipios = async () => {
+        const departamento = document.getElementById('depa').value;
+        fetch(
+            `../utils/municipios.json`
+        ).then((res) => res.json()).then((data) => {
+            const municipios = data.filter((municipio) => municipio.departamento === departamento).map((municipio) => municipio.municipio);
+            const selectMunicipio = document.getElementById('muni');
+            selectMunicipio.innerHTML = '';
+            municipios.forEach((municipio) => {
+                const option = document.createElement('option');
+                option.value = municipio;
+                option.text = municipio;
+                selectMunicipio.appendChild(option);
             });
-        };
-
-        const loadMunicipios = (dept) => {
-            fetch(
-                `../utils/municipios.json`
-            ).then((res) => res.json()).then((data) => {
-                const municipios = data.filter((municipio) => municipio.departamento === dept).map((municipio) => municipio.municipio);
-                const selectMunicipio = document.getElementById('muni');
-                selectMunicipio.innerHTML = '';
-                municipios.forEach((municipio) => {
-                    const option = document.createElement('option');
-                    option.value = municipio;
-                    option.text = municipio;
-                    selectMunicipio.appendChild(option);
-                });
-            });
-        };
-
-        const nameRef = document.getElementById('ingrenombre');
-        nameRef.addEventListener('change', () => {
-            document.getElementById('identificacion').value = '1234567890';
-            document.getElementsByName('phone')[0].value = '1234567890';
-            document.getElementsByName('email')[0].value = 'contacto@invima.com';
-            document.getElementsByName('name-razon-s')[0].value = 'Instituto Nacional de Vigilancia de Medicamentos y Alimentos';
-            document.getElementsByName('lastaname-sigla')[0].value = 'Invima';
-            document.getElementsByName('tipo-rem')[0].value = 'Empresas';
-            document.getElementsByName('address')[0].value = 'Carrera 68D # 17-11';
-            document.getElementsByName('continente')[0].value = 'América del Sur';
-            document.getElementsByName('pais')[0].value = 'Colombia';
-            loadMunicipios('Bogotá D.C.');
-            document.getElementsByName('depa')[0].value = 'Bogotá D.C.';
-            document.getElementsByName('muni')[0].value = 'Bogotá D.C.';
         });
+    };
 
-        const handleSubmit = (e) => {
-            Swal.fire({
-                title: 'Planilla Generada exitosamente',
-                text: 'La planilla se ha generado correctamente.',
-                icon: 'success',
-                confirmButtonText: 'Aceptar'
+    const loadMunicipios = (dept) => {
+        fetch(
+            `../utils/municipios.json`
+        ).then((res) => res.json()).then((data) => {
+            const municipios = data.filter((municipio) => municipio.departamento === dept).map((municipio) => municipio.municipio);
+            const selectMunicipio = document.getElementById('muni');
+            selectMunicipio.innerHTML = '';
+            municipios.forEach((municipio) => {
+                const option = document.createElement('option');
+                option.value = municipio;
+                option.text = municipio;
+                selectMunicipio.appendChild(option);
             });
-            document.getElementById('result-table').removeAttribute('hidden');
-            document.getElementById('search-box').setAttribute('hidden', true);
-        };
-        const handleSumbitAdd = (e) => {
-            Swal.fire({
-                title: 'Remitente Agregado exitosamente',
-                text: 'El remitente se ha agregado correctamente.',
-                icon: 'success',
-                confirmButtonText: 'Aceptar'
-            });
-        };
-    </script>
+        });
+    };
 
-    <!--  modal ingresar radicacion -->
-    <!-- Fin Contenido -->
-    <?php include('includes/footer.php'); ?>
+    const nameRef = document.getElementById('ingrenombre');
+    nameRef.addEventListener('change', () => {
+        document.getElementById('identificacion').value = '1234567890';
+        document.getElementsByName('phone')[0].value = '1234567890';
+        document.getElementsByName('email')[0].value = 'contacto@invima.com';
+        document.getElementsByName('name-razon-s')[0].value = 'Instituto Nacional de Vigilancia de Medicamentos y Alimentos';
+        document.getElementsByName('lastaname-sigla')[0].value = 'Invima';
+        document.getElementsByName('tipo-rem')[0].value = 'Empresas';
+        document.getElementsByName('address')[0].value = 'Carrera 68D # 17-11';
+        document.getElementsByName('continente')[0].value = 'América del Sur';
+        document.getElementsByName('pais')[0].value = 'Colombia';
+        loadMunicipios('Bogotá D.C.');
+        document.getElementsByName('depa')[0].value = 'Bogotá D.C.';
+        document.getElementsByName('muni')[0].value = 'Bogotá D.C.';
+    });
+
+    const handleSubmit = (e) => {
+        Swal.fire({
+            title: 'Planilla Generada exitosamente',
+            text: 'La planilla se ha generado correctamente.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
+        document.getElementById('result-table').removeAttribute('hidden');
+        document.getElementById('search-box').setAttribute('hidden', true);
+    };
+    const handleSumbitAdd = (e) => {
+        Swal.fire({
+            title: 'Remitente Agregado exitosamente',
+            text: 'El remitente se ha agregado correctamente.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
+    };
+</script>
+<!--  modal ingresar radicacion -->
+<!-- Fin Contenido -->
+<?php include('includes/footer.php'); ?>

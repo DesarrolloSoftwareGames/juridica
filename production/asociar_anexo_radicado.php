@@ -133,84 +133,84 @@ else {
             </table>
         </div>
     </div>
-    <!--  modal ver correo -->
-    <form class="row gy-2 gx-3 align-items-center">
-        <div class="modal fade bs-example-modal-ver-correo" tabindex=" -1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
-                            Vista previa correo remitente
-                        </h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="x_panelm">
-                            <p>
+</div>
+<!--  modal ver correo -->
+<form class="row gy-2 gx-3 align-items-center">
+    <div class="modal fade bs-example-modal-ver-correo" tabindex=" -1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
+                        Vista previa correo remitente
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="x_panelm">
+                        <p>
 
-                            <div class="x_panelm2">
-                                <div class="container">
-                                    <div class="row p-5">
-                                        <p>
-                                        <div class="col-md-6 col-2 m">
-                                            <label for="identificacion">Remitente</label>
-                                            <input type="text" name="identificacion" id="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="contacto@invima.com">
-                                        </div>
-                                        <div class="col-md-6 col-2 m">
-                                            <label for="ingrenombre">Asunto</label>
-                                            <input id="ingrenombre" type="text" name="nombre" class="form-control" aria-describedby="name" required disabled value="REF: Solicitud de información">
-                                        </div>
-                                        <div class="col-md-4 col-2 m">
-                                            <label for="name-razon-s">Fecha de ingreso</label>
-                                            <input type="date" name="name-razon-s" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="14/05/2024">
-                                        </div>
-                                        <div class="col-md-4 col-2 m">
-                                            <label for="name-razon-s">Días para Término</label>
-                                            <input type="text" name="name-razon-s" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="30d">
-                                        </div>
-                                        <div class="col-md-4 col-2 m">
-                                            <label for="lastaname-sigla">Dependencia</label>
-                                            <input type="text" name="lastaname-sigla" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="Secretaria Salud">
-                                        </div>
-                                        <div class="col-md-12 col-2 m">
-                                            <label for="tipo-rem">Contenido</label>
-                                            <textarea class="form-control" id="asunto" name="asunto" rows="6" placeholder="" readonly>Se solicita información sobre los procesos de vigilancia y control de alimentos en el país.</textarea>
-                                        </div>
-                                        <div class="col-md-3 col-2 m">
-                                            <label for="tipo-rem">Anexos</label>
-                                            <input type="text" name="anexos" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="2">
-                                        </div>
-                                        <div class="col-md-3 col-2 m">
-                                            <label for="tipo-rem">Folios</label>
-                                            <input type="text" name="anexos" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="5">
-                                        </div>
-                                        <div class="col-md-12 col-2 m">
-                                            <label for="tipo-rem">Documentos:</label>
-                                            <div class="x-content">
-                                                <ul>
-                                                    <li>
-                                                        <i>
-                                                            <a href="#" class="text-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-documento">
-                                                                <i class="fas fa-paperclip"></i>
-                                                                Carta solicitud de información.pdf</a>
-                                                        </i>
-                                                    </li>
-                                                    <li>
-                                                        <i>
-                                                            <a href="#" class="text-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-documento">
-                                                                <i class="fas fa-paperclip"></i>
-                                                                Poder autenticado.pdf</a>
-                                                        </i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        </p>
+                        <div class="x_panelm2">
+                            <div class="container">
+                                <div class="row p-5">
+                                    <p>
+                                    <div class="col-md-6 col-2 m">
+                                        <label for="identificacion">Remitente</label>
+                                        <input type="text" name="identificacion" id="identificacion" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="contacto@invima.com">
                                     </div>
-                                    <div class="modal-footer">
-                                        <input type="submit" class="btn btn-primary" data-dismiss="modal" value="Cerrar">
+                                    <div class="col-md-6 col-2 m">
+                                        <label for="ingrenombre">Asunto</label>
+                                        <input id="ingrenombre" type="text" name="nombre" class="form-control" aria-describedby="name" required disabled value="REF: Solicitud de información">
                                     </div>
+                                    <div class="col-md-4 col-2 m">
+                                        <label for="name-razon-s">Fecha de ingreso</label>
+                                        <input type="date" name="name-razon-s" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="14/05/2024">
+                                    </div>
+                                    <div class="col-md-4 col-2 m">
+                                        <label for="name-razon-s">Días para Término</label>
+                                        <input type="text" name="name-razon-s" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="30d">
+                                    </div>
+                                    <div class="col-md-4 col-2 m">
+                                        <label for="lastaname-sigla">Dependencia</label>
+                                        <input type="text" name="lastaname-sigla" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="Secretaria Salud">
+                                    </div>
+                                    <div class="col-md-12 col-2 m">
+                                        <label for="tipo-rem">Contenido</label>
+                                        <textarea class="form-control" id="asunto" name="asunto" rows="6" placeholder="" readonly>Se solicita información sobre los procesos de vigilancia y control de alimentos en el país.</textarea>
+                                    </div>
+                                    <div class="col-md-3 col-2 m">
+                                        <label for="tipo-rem">Anexos</label>
+                                        <input type="text" name="anexos" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="2">
+                                    </div>
+                                    <div class="col-md-3 col-2 m">
+                                        <label for="tipo-rem">Folios</label>
+                                        <input type="text" name="anexos" class="form-control" aria-describedby="emailHelp" placeholder="" required disabled value="5">
+                                    </div>
+                                    <div class="col-md-12 col-2 m">
+                                        <label for="tipo-rem">Documentos:</label>
+                                        <div class="x-content">
+                                            <ul>
+                                                <li>
+                                                    <i>
+                                                        <a href="#" class="text-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-documento">
+                                                            <i class="fas fa-paperclip"></i>
+                                                            Carta solicitud de información.pdf</a>
+                                                    </i>
+                                                </li>
+                                                <li>
+                                                    <i>
+                                                        <a href="#" class="text-primary" data-bs-dismiss="modal" data-toggle="modal" data-target=".bs-example-modal-ingresar-documento">
+                                                            <i class="fas fa-paperclip"></i>
+                                                            Poder autenticado.pdf</a>
+                                                    </i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" class="btn btn-primary" data-dismiss="modal" value="Cerrar">
                                 </div>
                             </div>
                         </div>
@@ -218,173 +218,174 @@ else {
                 </div>
             </div>
         </div>
+    </div>
+</form>
+<!--  modal ingresar radicacion -->
+<div class="modal fade bs-example-modal-ingresar-remitente" tabindex=" -1" role="dialog" aria-hidden="true">
+    <form class="row gy-2 gx-3 align-items-center">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
+                        Asociar Anexo a Radicado
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="x_panelm">
+                        <p>
+                        <p><b class="moda" style="font-size: 24px;">Asociar Anexo a Radicado</b></p>
+
+                        <div class="x_panelm2 p-3">
+                            <div class="container">
+                                <div class="row">
+                                    <p>
+                                    <div class="col-md-12 col-2 m">
+                                        <label for="ingre-pdf">Seleccione un archivo *</label>
+                                        <input id="ingre-pdf" type="file" name="ingre-pdf" class="form-control" aria-describedby="name" required>
+                                    </div>
+                                    <div class="col-md-12 col-2 m">
+                                        <label for="ingre-pdf-desc">Descripción del archivo *</label>
+                                        <textarea class="form-control" id="ingre-pdf-desc" name="ingre-pdf-desc" rows="6" placeholder="" required></textarea>
+                                    </div>
+                                    <div class="col-md-12 col-2 m">
+                                        <label for="ingre-pdf-prev">Previsualización *</label>
+                                        <embed id="anexo-prev" src="" type="application/pdf" width="100%" height="600px" />
+
+                                    </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
+                            <input type="submit" class="btn btn-primary" data-dismiss="modal" onclick="handleSumbitAdd()" value="Guardar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
-    <!--  modal ingresar radicacion -->
-    <div class="modal fade bs-example-modal-ingresar-remitente" tabindex=" -1" role="dialog" aria-hidden="true">
-        <form class="row gy-2 gx-3 align-items-center">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
-                            Asociar Anexo a Radicado
-                        </h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="x_panelm">
-                            <p>
-                            <p><b class="moda" style="font-size: 24px;">Asociar Anexo a Radicado</b></p>
+</div>
+<div class="modal fade bs-example-modal-ver-anexo" tabindex=" -1" role="dialog" aria-hidden="true">
+    <form class="row gy-2 gx-3 align-items-center">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
+                        Inspeccionar Anexo de Radicado
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="x_panelm">
+                        <p>
+                        <p><b class="moda" style="font-size: 24px;">Inspeccionar Anexo de Radicado</b></p>
 
-                            <div class="x_panelm2 p-3">
-                                <div class="container">
-                                    <div class="row">
-                                        <p>
-                                        <div class="col-md-12 col-2 m">
-                                            <label for="ingre-pdf">Seleccione un archivo *</label>
-                                            <input id="ingre-pdf" type="file" name="ingre-pdf" class="form-control" aria-describedby="name" required>
-                                        </div>
-                                        <div class="col-md-12 col-2 m">
-                                            <label for="ingre-pdf-desc">Descripción del archivo *</label>
-                                            <textarea class="form-control" id="ingre-pdf-desc" name="ingre-pdf-desc" rows="6" placeholder="" required></textarea>
-                                        </div>
-                                        <div class="col-md-12 col-2 m">
-                                            <label for="ingre-pdf-prev">Previsualización *</label>
-                                            <embed id="anexo-prev" src="" type="application/pdf" width="100%" height="600px" />
-
-                                        </div>
-                                        </p>
+                        <div class="x_panelm2 p-3">
+                            <div class="container">
+                                <div class="row">
+                                    <p>
+                                    <div class="col-md-12 col-2 m">
+                                        <label for="ingre-img-prev">Previsualización *</label>
+                                        <embed id="anexo-prev" src="../utils/anexo1.pdf" type="application/pdf" width="100%" height="600px" />
                                     </div>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cancelar">
-                                <input type="submit" class="btn btn-primary" data-dismiss="modal" onclick="handleSumbitAdd()" value="Guardar">
-                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cerrar">
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
-    <div class="modal fade bs-example-modal-ver-anexo" tabindex=" -1" role="dialog" aria-hidden="true">
-        <form class="row gy-2 gx-3 align-items-center">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 style="font-size:24px;" class="modal-title fa fa-user" id="myModalLabel2">&nbsp;
-                            Inspeccionar Anexo de Radicado
-                        </h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="x_panelm">
-                            <p>
-                            <p><b class="moda" style="font-size: 24px;">Inspeccionar Anexo de Radicado</b></p>
-
-                            <div class="x_panelm2 p-3">
-                                <div class="container">
-                                    <div class="row">
-                                        <p>
-                                        <div class="col-md-12 col-2 m">
-                                            <label for="ingre-img-prev">Previsualización *</label>
-                                            <embed id="anexo-prev" src="../utils/anexo1.pdf" type="application/pdf" width="100%" height="600px" />
-                                        </div>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <input type="button" class="btn btn-primary" data-dismiss="modal" value="Cerrar">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <script>
-        const getMunicipios = async () => {
-            const departamento = document.getElementById('depa').value;
-            fetch(
-                `../utils/municipios.json`
-            ).then((res) => res.json()).then((data) => {
-                const municipios = data.filter((municipio) => municipio.departamento === departamento).map((municipio) => municipio.municipio);
-                const selectMunicipio = document.getElementById('muni');
-                selectMunicipio.innerHTML = '';
-                municipios.forEach((municipio) => {
-                    const option = document.createElement('option');
-                    option.value = municipio;
-                    option.text = municipio;
-                    selectMunicipio.appendChild(option);
-                });
+        </div>
+    </form>
+</div>
+<script>
+    const getMunicipios = async () => {
+        const departamento = document.getElementById('depa').value;
+        fetch(
+            `../utils/municipios.json`
+        ).then((res) => res.json()).then((data) => {
+            const municipios = data.filter((municipio) => municipio.departamento === departamento).map((municipio) => municipio.municipio);
+            const selectMunicipio = document.getElementById('muni');
+            selectMunicipio.innerHTML = '';
+            municipios.forEach((municipio) => {
+                const option = document.createElement('option');
+                option.value = municipio;
+                option.text = municipio;
+                selectMunicipio.appendChild(option);
             });
-        };
-
-        const loadMunicipios = (dept) => {
-            fetch(
-                `../utils/municipios.json`
-            ).then((res) => res.json()).then((data) => {
-                const municipios = data.filter((municipio) => municipio.departamento === dept).map((municipio) => municipio.municipio);
-                const selectMunicipio = document.getElementById('muni');
-                selectMunicipio.innerHTML = '';
-                municipios.forEach((municipio) => {
-                    const option = document.createElement('option');
-                    option.value = municipio;
-                    option.text = municipio;
-                    selectMunicipio.appendChild(option);
-                });
-            });
-        };
-
-        const nameRef = document.getElementById('ingrenombre');
-        nameRef.addEventListener('change', () => {
-            document.getElementById('identificacion').value = '1234567890';
-            document.getElementsByName('phone')[0].value = '1234567890';
-            document.getElementsByName('email')[0].value = 'contacto@invima.com';
-            document.getElementsByName('name-razon-s')[0].value = 'Instituto Nacional de Vigilancia de Medicamentos y Alimentos';
-            document.getElementsByName('lastaname-sigla')[0].value = 'Invima';
-            document.getElementsByName('tipo-rem')[0].value = 'Empresas';
-            document.getElementsByName('address')[0].value = 'Carrera 68D # 17-11';
-            document.getElementsByName('continente')[0].value = 'América del Sur';
-            document.getElementsByName('pais')[0].value = 'Colombia';
-            loadMunicipios('Bogotá D.C.');
-            document.getElementsByName('depa')[0].value = 'Bogotá D.C.';
-            document.getElementsByName('muni')[0].value = 'Bogotá D.C.';
         });
+    };
 
-        const handleSubmit = (e) => {
-            // Swal.fire({
-            //     title: 'Planilla Generada exitosamente',
-            //     text: 'La planilla se ha generado correctamente.',
-            //     icon: 'success',
-            //     confirmButtonText: 'Aceptar'
-            // });
-            document.getElementById('result-table').removeAttribute('hidden');
-            document.getElementById('search-box').setAttribute('hidden', true);
-        };
-        const handleSumbitAdd = (e) => {
-            Swal.fire({
-                title: 'Anexo Asociado exitosamente',
-                text: 'El anexo se ha asociado correctamente',
-                icon: 'success',
-                confirmButtonText: 'Aceptar'
+    const loadMunicipios = (dept) => {
+        fetch(
+            `../utils/municipios.json`
+        ).then((res) => res.json()).then((data) => {
+            const municipios = data.filter((municipio) => municipio.departamento === dept).map((municipio) => municipio.municipio);
+            const selectMunicipio = document.getElementById('muni');
+            selectMunicipio.innerHTML = '';
+            municipios.forEach((municipio) => {
+                const option = document.createElement('option');
+                option.value = municipio;
+                option.text = municipio;
+                selectMunicipio.appendChild(option);
             });
-            document.getElementById('file-name').removeAttribute('hidden');
-            document.getElementById('add-file-button').setAttribute('hidden', true);
-        };
-
-        document.getElementById('ingre-pdf').addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                document.getElementById('anexo-prev').src = e.target.result;
-            };
-            reader.readAsDataURL(file);
         });
-    </script>
+    };
 
-    <!--  modal ingresar radicacion -->
-    <!-- Fin Contenido -->
-    <?php include('includes/footer.php'); ?>
+    const nameRef = document.getElementById('ingrenombre');
+    nameRef.addEventListener('change', () => {
+        document.getElementById('identificacion').value = '1234567890';
+        document.getElementsByName('phone')[0].value = '1234567890';
+        document.getElementsByName('email')[0].value = 'contacto@invima.com';
+        document.getElementsByName('name-razon-s')[0].value = 'Instituto Nacional de Vigilancia de Medicamentos y Alimentos';
+        document.getElementsByName('lastaname-sigla')[0].value = 'Invima';
+        document.getElementsByName('tipo-rem')[0].value = 'Empresas';
+        document.getElementsByName('address')[0].value = 'Carrera 68D # 17-11';
+        document.getElementsByName('continente')[0].value = 'América del Sur';
+        document.getElementsByName('pais')[0].value = 'Colombia';
+        loadMunicipios('Bogotá D.C.');
+        document.getElementsByName('depa')[0].value = 'Bogotá D.C.';
+        document.getElementsByName('muni')[0].value = 'Bogotá D.C.';
+    });
+
+    const handleSubmit = (e) => {
+        // Swal.fire({
+        //     title: 'Planilla Generada exitosamente',
+        //     text: 'La planilla se ha generado correctamente.',
+        //     icon: 'success',
+        //     confirmButtonText: 'Aceptar'
+        // });
+        document.getElementById('result-table').removeAttribute('hidden');
+        document.getElementById('search-box').setAttribute('hidden', true);
+    };
+    const handleSumbitAdd = (e) => {
+        Swal.fire({
+            title: 'Anexo Asociado exitosamente',
+            text: 'El anexo se ha asociado correctamente',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        });
+        document.getElementById('file-name').removeAttribute('hidden');
+        document.getElementById('add-file-button').setAttribute('hidden', true);
+    };
+
+    document.getElementById('ingre-pdf').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            document.getElementById('anexo-prev').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+</script>
+
+<!--  modal ingresar radicacion -->
+<!-- Fin Contenido -->
+<?php include('includes/footer.php'); ?>
